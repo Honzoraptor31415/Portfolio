@@ -79,7 +79,7 @@ function Home() {
               <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase icon" />
             </div>
             <h3 id="firebase">Firebase</h3>
-            <p>I first wanted to learn PHP and MySQL, but those are kind of old and unused technologies, that are also harder to setup than using Firebase. I used Firebase's Real-time DB for my previous portfolio website, that is written in HTML. No framework was used for that.</p>
+            <p>I first wanted to learn PHP and MySQL, but those are kind of old and unused technologies, that are also harder to setup than Firebase. I used Firebase's Real-time DB for my previous portfolio website, that is written in HTML. No framework was used for that.</p>
           </section>
           <section className="langs-section">
             <div className="langs-icons">
