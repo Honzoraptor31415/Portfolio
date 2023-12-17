@@ -10,7 +10,6 @@ function Home() {
           <p className="header-about">This is a small portfolio website made by <a href="https://github.com/Honzoraptor31415">Honzoraptor</a>. Whenever I code something, you'll find it here.</p>
         </div>
         <div className="header-side">
-
           <div className="langs-tech">
             <a href="#html">
               <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
@@ -39,16 +38,32 @@ function Home() {
             <a href="#firebase">
               <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" />
             </a>
-            <p className="langs-tech-above">What I use ↑</p>
+            <p className="langs-tech-above">What I use <span style={{ fontSize: "16pt" }}>👆</span></p>
           </div>
         </div>
       </header>
       <main>
         <section id="about">
           <h2>About me</h2>
+          <p className="about-text">
+            I'm a random guy in east of Czechia in Europe. I started learning to code in the beginning of the year 2023. I started with <span className="html">HTML</span> and <span className="css">CSS</span> and later learned other languages, frameworks and technologies. More on that later, <span className="colored-text">keep scrolling</span>!
+          </p>
         </section>
         <section id="contact">
-          <h2>Contact</h2>
+          <h2>Contact & socials</h2>
+          <div className="contact-socials-wrp">
+            <div className="socials-element">
+              <h3>Email</h3>
+              <a href="mailto:honzoraptor@gmail.com">Honzoraptor@gmail.com</a>
+            </div>
+            <div className="soc-el-wrp">
+              img
+              <div className="socials-element">
+                <h3>Github</h3>
+                <a href="https://github.com/Honzoraptor31415">Honzoraptor31415</a>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </>
