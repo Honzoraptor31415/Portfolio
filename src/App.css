@@ -1,6 +1,29 @@
+:root {
+  --mainBG: rgb(20, 20, 26);
+  --accent: #807AD6;
+  --accent2: #5F9EC7;
+  --accent2_hover: #00FFFF;
+  --accent_hover: #5C6AFF;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  background: rgba(255, 255, 255, 0.418);
+  border-radius: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--accent2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent2_hover);
 }
 
 html {
@@ -10,6 +33,153 @@ html {
 }
 
 body {
+  background: var(--mainBG);
+}
+
+nav {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 50px;
+  position: fixed;
+  background: rgba(20, 20, 26, 0.534);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px rgba(255, 255, 255, 0.14) solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .nav-side a {
+  color: rgba(255, 255, 255, 0.675);
+  text-decoration: none;
+  transition: .3s;
+  margin-inline: 16px;
+}
+
+nav .nav-side a:hover {
+  color: white;
+}
+
+.nav-side:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  letter-spacing: -1px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 17pt;
+  background-clip: text;
+  text-decoration: none;
+  transition: .3s;
+
+  background: -webkit-linear-gradient(40deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  max-width: fit-content;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.logo-text:hover {
+  background-position-x: 156px;
+  filter: contrast(10);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  background: rgb(20, 20, 26);
+  gap: 16%;
+}
+
+header h1 {
+  margin-left: -10px;
+  font-size: 39pt;
+  margin-bottom: 30px;
+}
+
+header .header-about {
+  font-size: 13pt;
+  letter-spacing: 2px;
+}
+
+.header-side {
+  max-width: 30%;
+}
+
+.header-side>* {
+  margin-inline: auto;
+}
+
+.header-side .langs-tech-above {
+  font-size: 12pt;
+  color: grey;
+  text-align: right;
+  width: calc(100% - 10px);
+  font-weight: 700;
+}
+
+.langs-tech {
+  max-width: 204px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.langs-tech a {
+  display: grid;
+  margin: 10px;
+  transition: .3s;
+  border-radius: 12px;
+}
+
+.langs-tech a:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+.langs-tech a[href="#html"]:hover {
+  box-shadow: 0 6px 6px #E14E1D;
+}
+
+.langs-tech a[href="#css"]:hover {
+  box-shadow: 0 6px 6px #0277BD;
+}
+
+.langs-tech a[href="#js"]:hover {
+  box-shadow: 0 6px 6px #F0DB4F;
+}
+
+.langs-tech a[href="#ts"]:hover {
+  box-shadow: 0 6px 6px #007ACC;
+}
+
+.langs-tech a[href="#react"]:hover {
+  box-shadow: 0 6px 6px #00D8FF;
+}
+
+.langs-tech a[href="#svelte"]:hover {
+  box-shadow: 0 6px 6px #FF3E00;
+}
+
+.langs-tech a[href="#git"]:hover {
+  box-shadow: 0 6px 6px #F03C2E;
+}
+
+.langs-tech a[href="#py"]:hover {
+  box-shadow: 0 3px 3px #346E9E, 0 6px 6px #FFD242;
+}
+
+.langs-tech a[href="#firebase"]:hover {
+  box-shadow: 0 2px 2px #FFA513, 0 4px 4px #F4830F, 0 6px 6px #FFCB2E;
+}
+
+p a {
+  text-decoration: none;
+  color: var(--accent2);
+  font-weight: 600;
+  transition: .3s;
+}
+
+p a:hover {
+  color: var(--accent2_hover);
 }
