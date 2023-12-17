@@ -224,6 +224,7 @@ body {
 
   .contact-socials-wrp {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-left: 30px;
   }
@@ -237,10 +238,25 @@ body {
     transition: .3s;
     font-size: 13pt;
     text-decoration: none;
-    margin-inline: 7px;
   }
 
   .socials-element a:hover {
     color: white;
+  }
+
+  .socel-wrp {
+    display: flex;
+    gap: 27px;
+  }
+
+  .socel-wrp img {
+    max-height: 50px;
+    width: auto;
+    user-select: none;
+  }
+
+  a.colored-text:hover {
+    background-position-x: 124px;
+    filter: contrast(10);
   }
 }

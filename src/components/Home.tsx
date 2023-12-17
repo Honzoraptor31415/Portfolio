@@ -7,7 +7,7 @@ function Home() {
       <header>
         <div className="header-side">
           <h1>Hey there!</h1>
-          <p className="header-about">This is a small portfolio website made by <a href="https://github.com/Honzoraptor31415">Honzoraptor</a>. Whenever I code something, you'll find it here.</p>
+          <p className="header-about">This is a small portfolio website made by <a href="https://github.com/Honzoraptor31415" className="colored-text">Honzoraptor</a>. Whenever I code something, you'll find it here.</p>
         </div>
         <div className="header-side">
           <div className="langs-tech">
@@ -52,12 +52,15 @@ function Home() {
         <section id="contact">
           <h2>Contact & socials</h2>
           <div className="contact-socials-wrp">
-            <div className="socials-element">
-              <h3>Email</h3>
-              <a href="mailto:honzoraptor@gmail.com">Honzoraptor@gmail.com</a>
+            <div className="socel-wrp">
+              <img src="gmail-icon.svg" alt="Gmail icon" />
+              <div className="socials-element">
+                <h3>Email</h3>
+                <a href="mailto:honzoraptor@gmail.com">Honzoraptor@gmail.com</a>
+              </div>
             </div>
-            <div className="soc-el-wrp">
-              img
+            <div className="socel-wrp">
+              <img src="github-icon.svg" alt="Hithub icon" />
               <div className="socials-element">
                 <h3>Github</h3>
                 <a href="https://github.com/Honzoraptor31415">Honzoraptor31415</a>
