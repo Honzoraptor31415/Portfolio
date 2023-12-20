@@ -8,7 +8,7 @@ function Home() {
       {self.innerWidth >= 1000 ? <DesktopNav /> : <MobileNav />}
       <header>
         <div className="header-side">
-          <h1>Hey there</h1>
+          <h1>Hey there!</h1>
           <p className="header-about">This is a small portfolio website made by <a href="https://github.com/Honzoraptor31415" target="_blank" className="colored-text">Honzoraptor</a>. Whenever I code something, you'll find it here.</p>
         </div>
         <div className="header-side">
