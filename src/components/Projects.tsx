@@ -1,8 +1,12 @@
 import DesktopNav from "./DesktopNav"
 import MobileNav from "./MobileNav"
 import Footer from "./Footer"
+import { useEffect } from "react"
 
 function Projects() {
+  useEffect(() => {
+    document.title = "Projects"
+  }, [])
   return (
     <>
       {self.innerWidth >= 1000 ? <DesktopNav /> : <MobileNav />}
