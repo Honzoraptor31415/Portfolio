@@ -1,10 +1,11 @@
-import Nav from "./Nav"
+import DesktopNav from "./DesktopNav"
 import Footer from "./Footer"
+import MobileNav from "./MobileNav"
 
 function Home() {
   return (
     <>
-      <Nav />
+      {self.innerWidth >= 1000 ? <DesktopNav /> : <MobileNav />}
       <header>
         <div className="header-side">
           <h1>Hey there!</h1>

@@ -1,10 +1,10 @@
-import Nav from "./Nav"
+import DesktopNav from "./DesktopNav"
 import Footer from "./Footer"
 
 function Projects() {
   return (
     <>
-      <Nav />
+      <DesktopNav />
       <main className="projects">
         {/* <div className="no-projects-wrp">
           <div className="no-projects">
