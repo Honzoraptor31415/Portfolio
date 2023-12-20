@@ -1,10 +1,11 @@
 import DesktopNav from "./DesktopNav"
+import MobileNav from "./MobileNav"
 import Footer from "./Footer"
 
 function Projects() {
   return (
     <>
-      <DesktopNav />
+      {self.innerWidth >= 1000 ? <DesktopNav /> : <MobileNav />}
       <main className="projects">
         {/* <div className="no-projects-wrp">
           <div className="no-projects">

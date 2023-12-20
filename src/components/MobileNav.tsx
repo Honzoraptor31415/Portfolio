@@ -23,6 +23,11 @@ function MobileNav() {
             <div className="menu-line cross-line"></div>
           </button>
         </div>
+        <div className="menu">
+          <a onClick={() => { setNavState(-100) }} href="/#about">About</a>
+          <a onClick={() => { setNavState(-100) }} href="/#contact">Contact</a>
+          <a onClick={() => { setNavState(-100) }} href="/projects">Projects</a>
+        </div>
       </nav>
     </>
   )

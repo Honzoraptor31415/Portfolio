@@ -59,14 +59,14 @@ function Home() {
               <img src="https://skillicons.dev/icons?i=css" alt="CSS icon" />
             </div>
             <h3>HTML, CSS</h3>
-            <p>As I already mentioned, these were the first languages I learned. Back then I couldn't really design things, which resulted into terrible looking webpages. <span className="sarcasm">Un</span>fortunately I didn't save any of the creations from back then.</p>
+            <p>As I already mentioned, these were the first languages I learned. Back then I couldn't really design things, which resulted into terribly looking webpages. <span className="sarcasm">Un</span>fortunately I didn't save any of the creations from back then.</p>
           </section>
           <section id="js" className="langs-section">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=js" alt="JS icon" />
             </div>
             <h3>JS</h3>
-            <p>This was the first actual programming language that I learned. I tried making games like The scary maze game with Javascript and it turned out pretty good. Javascript is the best language for both beginners and advanced programmers, because you can do basicly anything with it: Build Full-stack webapps, desktop apps, servers, even games!</p>
+            <p>This was the first actual programming language that I learned. I tried making games like The scary maze game with Javascript and it turned out pretty good. Javascript is the best language for both beginners and advanced programmers, because you can do basicly anything with it: Build Full-stack webapps, desktop apps, servers and even games!</p>
           </section>
           <section id="py" className="langs-section">
             <div className="langs-icons">
@@ -101,7 +101,7 @@ function Home() {
               <img src="https://skillicons.dev/icons?i=git" alt="Git icon" />
             </div>
             <h3>Git</h3>
-            <p>Another step to being a good developer is to learn Git and Github (or GitLab/BitBucket, but Github is the most widely used one). I started learning Git just around October 2023, which is kinda late in my opinion. Anyway, <a href="https://github.com/Honzoraptor31415">here's my Github</a>.</p>
+            <p>Another step to being a good developer is to learn Git and Github (or GitLab/BitBucket, but Github is the most used one). I started learning Git just around October 2023, which is kinda late in my opinion. Anyways, <a href="https://github.com/Honzoraptor31415">here's my Github</a>.</p>
           </section>
           <section id="svelte" className="langs-section">
             <div className="langs-icons">
