@@ -3,10 +3,16 @@ import Footer from "./Footer"
 import MobileNav from "./MobileNav"
 
 function Home() {
+
   return (
     <>
       {self.innerWidth >= 1000 ? <DesktopNav /> : <MobileNav />}
       <header>
+        <div className="hb-wrp">
+          <div id="header-background">
+            <div className="hb-shadow"></div>
+          </div>
+        </div>
         <div className="header-side">
           <h1>Hey there!</h1>
           <p className="header-about">This is a small portfolio website made by <a href="https://github.com/Honzoraptor31415" target="_blank" className="colored-text">Honzoraptor</a>. Whenever I code something, you'll find it here.</p>
@@ -139,6 +145,7 @@ function Home() {
         </section>
       </main>
       <Footer />
+      <script src="header-animation.js"></script>
     </>
   )
 }

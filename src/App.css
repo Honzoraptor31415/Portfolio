@@ -1,5 +1,6 @@
 :root {
   --mainBG: rgb(20, 20, 26);
+  --mainBGNum: 20, 20, 26;
   --accent: #807AD6;
   --accent2: #5F9EC7;
   --accent2_hover: #00FFFF;
@@ -39,6 +40,16 @@ body {
 }
 
 @media (min-width: 1000px) {
+  .hb-wrp {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 90%;
+    border-radius: 50%;
+    position: absolute;
+  }
+
   nav {
     box-sizing: border-box;
     width: 100%;
@@ -242,6 +253,16 @@ body {
 }
 
 @media (max-width: 999px) {
+  .hb-wrp {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 90%;
+    border-radius: 50%;
+    position: absolute;
+  }
+
   nav:not(.expanded) {
     box-sizing: border-box;
     width: 100%;
@@ -379,6 +400,10 @@ body {
   header h1 {
     font-size: 34pt;
     margin-bottom: 20px;
+  }
+
+  header>* {
+    z-index: 2;
   }
 
   .header-about {
@@ -790,4 +815,57 @@ main.projects>h1 {
   max-height: 30px;
   width: auto;
   filter: invert(10%);
+}
+
+#header-background {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -2;
+  overflow: hidden;
+}
+
+header>*:not(.hb-wrp) {
+  z-index: 4;
+}
+
+#header-background:hover>.bg-element {
+  filter: none;
+}
+
+.hb-shadow {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  box-shadow: inset 0 0 30px rgb(var(--mainBGNum)), inset 0 0 90px rgb(var(--mainBGNum)), inset 0 0 90px rgb(var(--mainBGNum)), inset 0 0 90px rgb(var(--mainBGNum));
+  background: rgba(var(--mainBGNum), 0.6)
+}
+
+.bg-element {
+  border: 1px rgba(128, 128, 128, 0.596) solid;
+  width: 30px;
+  height: 80px;
+  position: absolute;
+  transition: .5s;
+  animation: bgo 30s infinite linear;
+  filter: grayscale(100%);
+}
+
+.bg-element:nth-of-type(even) {
+  animation: bge 30s infinite linear;
+}
+
+@keyframes bge {
+  50% {
+    transform: translate(40px, -20px) scale(0.7);
+  }
+}
+
+@keyframes bgo {
+  50% {
+    transform: translate(-40px, 20px) scale(0.7);
+  }
 }
