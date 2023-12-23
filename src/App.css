@@ -50,6 +50,16 @@ body {
     position: absolute;
   }
 
+  .bg-element {
+  border: 1px rgba(128, 128, 128, 0.596) solid;
+  width: 30px;
+  height: 80px;
+  position: absolute;
+  transition: .5s;
+  animation: bgo 30s infinite linear;
+  filter: grayscale(100%);
+}
+
   nav {
     box-sizing: border-box;
     width: 100%;
@@ -253,6 +263,16 @@ body {
 }
 
 @media (max-width: 999px) {
+  .bg-element {
+  border: 1px rgba(128, 128, 128, 0.596) solid;
+  width: 30px;
+  height: 80px;
+  position: absolute;
+  transition: .5s;
+  animation: bgo 30s infinite linear;
+  filter: none;
+}
+  
   .hb-wrp {
     left: 50%;
     top: 50%;
@@ -842,16 +862,6 @@ header>*:not(.hb-wrp) {
   z-index: 1;
   box-shadow: inset 0 0 30px rgb(var(--mainBGNum)), inset 0 0 90px rgb(var(--mainBGNum)), inset 0 0 90px rgb(var(--mainBGNum)), inset 0 0 90px rgb(var(--mainBGNum));
   background: rgba(var(--mainBGNum), 0.6)
-}
-
-.bg-element {
-  border: 1px rgba(128, 128, 128, 0.596) solid;
-  width: 30px;
-  height: 80px;
-  position: absolute;
-  transition: .5s;
-  animation: bgo 30s infinite linear;
-  filter: grayscale(100%);
 }
 
 .bg-element:nth-of-type(even) {
