@@ -176,6 +176,7 @@ body {
   .socel-wrp {
     display: flex;
     gap: 27px;
+    margin-block: 30px;
   }
 
   .socel-wrp img {

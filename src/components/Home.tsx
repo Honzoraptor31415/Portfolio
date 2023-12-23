@@ -122,10 +122,17 @@ function Home() {
               </div>
             </div>
             <div className="socel-wrp">
-              <img src="github-icon.svg" alt="Hithub icon" />
+              <img src="github-icon.svg" alt="Github icon" />
               <div className="socials-element">
                 <h3>Github</h3>
                 <a href="https://github.com/Honzoraptor31415">Honzoraptor31415</a>
+              </div>
+            </div>
+            <div className="socel-wrp">
+              <img src="instagram-icon.svg" alt="Instagram icon" />
+              <div className="socials-element">
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/honzoraptor/">@honzoraptor</a>
               </div>
             </div>
           </div>
