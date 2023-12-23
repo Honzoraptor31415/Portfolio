@@ -9,7 +9,7 @@ function MobileNav() {
         <a href="https://github.com/Honzoraptor31415">
           <img src="github-icon.svg" alt="Github icon" />
         </a>
-        <a href="/" className="logo-text">HonzoRaptor's</a>
+        <a href="/" className="logo-text">{navigator.language === "cs-CZ" ? "Honzovo" : "HonzoRaptor's"}</a>
         <button onClick={() => { setNavState(0) }}>
           <div className="menu-line"></div>
           <div className="menu-line"></div>
@@ -24,9 +24,9 @@ function MobileNav() {
           </button>
         </div>
         <div className="menu">
-          <a onClick={() => { setNavState(-100) }} href="/#about">About</a>
-          <a onClick={() => { setNavState(-100) }} href="/#contact">Contact</a>
-          <a onClick={() => { setNavState(-100) }} href="/projects">Projects</a>
+          <a onClick={() => { setNavState(-100) }} href="/#about">{navigator.language === "cs-CZ" ? "O mně" : "About"}</a>
+          <a onClick={() => { setNavState(-100) }} href="/#contact">{navigator.language === "cs-CZ" ? "Kontakt" : "Contact"}</a>
+          <a onClick={() => { setNavState(-100) }} href="/projects">{navigator.language === "cs-CZ" ? "Projekty" : "Projects"}</a>
         </div>
       </nav>
     </>
