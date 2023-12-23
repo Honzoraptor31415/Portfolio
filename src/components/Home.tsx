@@ -145,7 +145,6 @@ function Home() {
         </section>
       </main>
       <Footer />
-      <script src="header-animation.js"></script>
     </>
   )
 }
