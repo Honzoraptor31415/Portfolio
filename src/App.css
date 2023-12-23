@@ -51,14 +51,14 @@ body {
   }
 
   .bg-element {
-  border: 1px rgba(128, 128, 128, 0.596) solid;
-  width: 30px;
-  height: 80px;
-  position: absolute;
-  transition: .5s;
-  animation: bgo 30s infinite linear;
-  filter: grayscale(100%);
-}
+    border: 1px rgba(128, 128, 128, 0.596) solid;
+    width: 30px;
+    height: 80px;
+    position: absolute;
+    transition: .5s;
+    animation: bgo 30s infinite linear;
+    filter: grayscale(100%);
+  }
 
   nav {
     box-sizing: border-box;
@@ -264,15 +264,15 @@ body {
 
 @media (max-width: 999px) {
   .bg-element {
-  border: 1px rgba(128, 128, 128, 0.596) solid;
-  width: 30px;
-  height: 80px;
-  position: absolute;
-  transition: .5s;
-  animation: bgo 30s infinite linear;
-  filter: none;
-}
-  
+    border: 1px rgba(128, 128, 128, 0.596) solid;
+    width: 30px;
+    height: 80px;
+    position: absolute;
+    transition: .5s;
+    animation: bgo 30s infinite linear;
+    filter: none;
+  }
+
   .hb-wrp {
     left: 50%;
     top: 50%;
@@ -499,6 +499,7 @@ body {
   }
 
   .socel-wrp img {
+    min-width: 50px;
     max-width: 50px;
     height: auto;
     user-select: none;

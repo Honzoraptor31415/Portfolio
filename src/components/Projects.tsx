@@ -5,7 +5,11 @@ import { useEffect } from "react"
 
 function Projects() {
   useEffect(() => {
-    document.title = "Projects"
+    if (navigator.language === "cs-CZ") {
+      document.title = "Projekty"
+    } else {
+      document.title = "Projects"
+    }
   }, [])
   return (
     <>

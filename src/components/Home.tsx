@@ -1,8 +1,17 @@
 import DesktopNav from "./DesktopNav"
 import Footer from "./Footer"
 import MobileNav from "./MobileNav"
+import { useEffect } from "react"
 
 function Home() {
+  useEffect(() => {
+    if (navigator.language === "cs-CZ") {
+      document.title = "HonzoRaptorovo portfolio!"
+    } else {
+      document.title = "Honzoraptor's portfolio!"
+    }
+  }, [])
+
   return (
     <>
       {self.innerWidth >= 1000 ? <DesktopNav /> : <MobileNav />}
