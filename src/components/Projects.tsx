@@ -28,7 +28,7 @@ function Projects() {
             <div className="project-side">
               <h3>CodeConnect</h3>
               {navigator.language === "cs-CZ" ? (
-                <p>CodeConnect je aplikace, která uživatelům umožní zveřejnit dotaz na aplikaci, kterou v postu popíšou a kdokoliv z vývojářů (role uživatele) tu aplikaci může pro toho člověka naprogramovat</p>
+                <p>CodeConnect je aplikace, která uživatelům umožní zveřejnit dotaz na aplikaci, kterou v dotazu popíšou a kdokoliv z vývojářů (role uživatele) tu aplikaci může pro toho člověka naprogramovat.</p>
               ) : (
                 <p>CodeConnect is an app, that you can post requests for apps on. Any of the devs (role for the user) can view the post and code the app that the person described.</p>
               )}
