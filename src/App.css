@@ -50,16 +50,6 @@ body {
     position: absolute;
   }
 
-  .bg-element {
-    border: 1px rgba(128, 128, 128, 0.596) solid;
-    width: 30px;
-    height: 80px;
-    position: absolute;
-    transition: .5s;
-    animation: bgo 30s infinite linear;
-    filter: grayscale(100%);
-  }
-
   nav {
     box-sizing: border-box;
     width: 100%;
@@ -153,6 +143,7 @@ body {
   }
 
   .langs-tech-above {
+    height: fit-content;
     font-size: 12pt;
     color: grey;
     text-align: right;
@@ -199,6 +190,9 @@ body {
     gap: 27px;
     margin-block: 30px;
     width: 250px;
+    animation: socel-scroll cubic-bezier(1, 0.37, 0.58, 1) both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%
   }
 
   .socel-wrp img {
@@ -263,16 +257,6 @@ body {
 }
 
 @media (max-width: 999px) {
-  .bg-element {
-    border: 1px rgba(128, 128, 128, 0.596) solid;
-    width: 30px;
-    height: 80px;
-    position: absolute;
-    transition: .5s;
-    animation: bgo 30s infinite linear;
-    filter: none;
-  }
-
   .hb-wrp {
     left: 50%;
     top: 50%;
@@ -446,6 +430,7 @@ body {
   }
 
   .langs-tech-above {
+    height: fit-content;
     font-size: 12pt;
     color: grey;
     text-align: center;
@@ -496,6 +481,9 @@ body {
     display: flex;
     gap: 30px;
     margin-left: 15px;
+    animation: socel-scroll cubic-bezier(1, 0.37, 0.58, 1) both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%
   }
 
   .socel-wrp img {
@@ -845,14 +833,27 @@ main.projects>h1 {
   position: absolute;
   z-index: -2;
   overflow: hidden;
+  filter: blur(20px) grayscale(100%);
+  animation: non-gray 1s forwards;
+}
+
+@keyframes non-gray {
+  100% {
+    filter: none;
+  }
 }
 
 header>*:not(.hb-wrp) {
   z-index: 4;
 }
 
-#header-background:hover>.bg-element {
-  filter: none;
+.bg-element {
+  border: 1px rgba(128, 128, 128, 0.596) solid;
+  width: 30px;
+  height: 80px;
+  position: absolute;
+  transition: .5s;
+  animation: bgo 30s infinite linear;
 }
 
 .hb-shadow {
@@ -879,4 +880,35 @@ header>*:not(.hb-wrp) {
   50% {
     transform: translate(-40px, 20px) scale(0.7);
   }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateX(-80%);
+  transition: all .8s;
+}
+
+.show {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.socel-wrp:nth-child(1) {
+  transition: .2s;
+}
+
+.socel-wrp:nth-child(2) {
+  transition: .3s;
+}
+
+.socel-wrp:nth-child(3) {
+  transition: .6s;
 }

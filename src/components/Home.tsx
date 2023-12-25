@@ -10,6 +10,19 @@ function Home() {
     } else {
       document.title = "Honzoraptor's portfolio!"
     }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show")
+        } else {
+          entry.target.classList.remove("show")
+        }
+      })
+    })
+    const hiddenElements = document.querySelectorAll(".hidden")
+
+    hiddenElements.forEach((el) => observer.observe(el))
   }, [])
 
   return (
@@ -21,7 +34,7 @@ function Home() {
             <div className="hb-shadow"></div>
           </div>
         </div>
-        <div className="header-side">
+        <div className="header-side hidden">
           <h1>{navigator.language === "cs-CZ" ? "Těpéro!" : "Hey there!"}</h1>
           {navigator.language === "cs-CZ" ? (
 
@@ -30,7 +43,7 @@ function Home() {
             <p className="header-about">This is a small portfolio website made by <a href="https://github.com/Honzoraptor31415" target="_blank" className="colored-text">Honzoraptor</a>. Whenever I code something, you'll find it here.</p>
           )}
         </div>
-        <div className="header-side">
+        <div className="header-side hidden">
           <div className="langs-tech">
             <a href="#html-css">
               <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
@@ -68,7 +81,7 @@ function Home() {
         </div>
       </header>
       <main>
-        <section>
+        <section className="hidden">
           <h2 id="about">{navigator.language === "cs-CZ" ? "O mně (egoistický)" : "About me"}</h2>
           {navigator.language === "cs-CZ" ? (
             <p className="about-text">
@@ -82,7 +95,7 @@ function Home() {
         </section>
         <section>
           <h2 id="langs-techs">{navigator.language === "cs-CZ" ? "Jazyky a technologie" : "Languages and technogolies"}</h2>
-          <section id="html-css" className="langs-section">
+          <section id="html-css" className="langs-section hidden">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=html" alt="HTML icon" />
               <img src="https://skillicons.dev/icons?i=css" alt="CSS icon" />
@@ -94,7 +107,7 @@ function Home() {
               <p>As I already mentioned, these were the first languages I learned. Back then I couldn't really design things, which resulted into terribly looking webpages. <span className="sarcasm">Un</span>fortunately I didn't save any of the creations from back then, so noone can see those terrible designs.</p>
             )}
           </section>
-          <section id="js" className="langs-section">
+          <section id="js" className="langs-section hidden">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=js" alt="JS icon" />
             </div>
@@ -105,7 +118,7 @@ function Home() {
               <p>This was the first actual programming language that I learned. I tried making games like The scary maze game with Javascript and it turned out pretty good. Javascript is the best language for both beginners and advanced programmers, because you can do basicly anything with it: Build Full-stack webapps, desktop apps, servers and even games!</p>
             )}
           </section>
-          <section id="py" className="langs-section">
+          <section id="py" className="langs-section hidden">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=py" alt="Python icon" />
             </div>
@@ -116,7 +129,7 @@ function Home() {
               <p>I started to be more interested in programming at this point and wanted to try something new. I wrote my first lines of Python code in a web-based IDE on <a href="https://www.w3schools.com/python/trypython.asp?filename=demo_default">W3schools.com</a></p>
             )}
           </section>
-          <section id="firebase" className="langs-section">
+          <section id="firebase" className="langs-section hidden">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase icon" />
             </div>
@@ -127,7 +140,7 @@ function Home() {
               <p>I first wanted to learn PHP and MySQL, but those are kind of old and unused technologies, that are also harder to setup than Firebase. One of the websites that I first used Firebase on is my older portfolio website, that is written in HTML. No framework was used for it.</p>
             )}
           </section>
-          <section id="ts" className="langs-section">
+          <section id="ts" className="langs-section hidden">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=ts" alt="TS icon" />
             </div>
@@ -138,7 +151,7 @@ function Home() {
               <p>Even tho I don't really like this language for it's weird syntax, that is basicly messed up Javascirpt, I started learning Typescript around the time I found out about React and I got used to it.</p>
             )}
           </section>
-          <section id="react" className="langs-section">
+          <section id="react" className="langs-section hidden">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=react" alt="React icon" />
             </div>
@@ -149,7 +162,7 @@ function Home() {
               <p>When I made my first React webapp, I felt the power of it and despite having troubles when first using useStates and useEffects, I like it. This website is built with React btw.</p>
             )}
           </section>
-          <section id="git" className="langs-section">
+          <section id="git" className="langs-section hidden">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=git" alt="Git icon" />
             </div>
@@ -160,7 +173,7 @@ function Home() {
               <p>Another step to being a good developer is to learn Git and Github (or GitLab/BitBucket, but Github is the most used one). I started learning Git just around November 2023, which is kinda late in my opinion. Anyways, <a href="https://github.com/Honzoraptor31415">here's my Github</a>.</p>
             )}
           </section>
-          <section id="svelte" className="langs-section">
+          <section id="svelte" className="langs-section hidden">
             <div className="langs-icons">
               <img src="https://skillicons.dev/icons?i=svelte" alt="Svelte icon" />
             </div>
@@ -172,24 +185,24 @@ function Home() {
             )}
           </section>
         </section>
-        <section id="contact">
+        <section className="hidden" id="contact">
           <h2>{navigator.language === "cs-CZ" ? "Kontakt & sociální sítě" : "Contact & socials"}</h2>
           <div className="contact-socials-wrp">
-            <div className="socel-wrp">
+            <div className="socel-wrp hidden">
               <img src="gmail-icon.svg" alt="Gmail icon" />
               <div className="socials-element">
                 <h3>Email</h3>
                 <a href="mailto:honzoraptor@gmail.com">Honzoraptor@gmail.com</a>
               </div>
             </div>
-            <div className="socel-wrp">
+            <div className="socel-wrp hidden">
               <img src="github-icon.svg" alt="Github icon" />
               <div className="socials-element">
                 <h3>Github</h3>
                 <a href="https://github.com/Honzoraptor31415">Honzoraptor31415</a>
               </div>
             </div>
-            <div className="socel-wrp">
+            <div className="socel-wrp hidden">
               <img src="instagram-icon.svg" alt="Instagram icon" />
               <div className="socials-element">
                 <h3>Instagram</h3>

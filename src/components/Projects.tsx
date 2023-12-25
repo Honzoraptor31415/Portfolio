@@ -10,7 +10,20 @@ function Projects() {
     } else {
       document.title = "Projects"
     }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show")
+        } else {
+          entry.target.classList.remove("show")
+        }
+      })
+    })
+    const hiddenElements = document.querySelectorAll(".hidden")
+
+    hiddenElements.forEach((el) => observer.observe(el))
   }, [])
+
   return (
     <>
       {self.innerWidth >= 1000 ? <DesktopNav /> : <MobileNav />}
@@ -23,7 +36,7 @@ function Projects() {
         </div> */}
         <h1>{navigator.language === "cs-CZ" ? "Moje projekty" : "My projects"}</h1>
         <div className="projects-wrp">
-          <div className="project">
+          <div className="project hidden">
             <div className="project-side">
               <a href="https://github.com/Honzoraptor31415/CodeConnect">
                 <img src="codeconnectapp-screenshot.png" alt="CodeConnect screenshot" />
