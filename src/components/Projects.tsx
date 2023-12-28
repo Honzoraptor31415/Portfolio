@@ -1,5 +1,3 @@
-import Nav from "./Nav"
-import Footer from "./Footer"
 import { useEffect } from "react"
 
 function Projects() {
@@ -25,7 +23,6 @@ function Projects() {
 
   return (
     <>
-      <Nav />
       <main className="projects">
         {/* <div className="no-projects-wrp">
           <div className="no-projects">
@@ -68,7 +65,6 @@ function Projects() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

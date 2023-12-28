@@ -1,5 +1,3 @@
-import Nav from "./Nav"
-import Footer from "./Footer"
 import { useEffect } from "react"
 
 function Home() {
@@ -26,7 +24,6 @@ function Home() {
 
   return (
     <>
-      <Nav />
       <header>
         <div className="header-side hidden">
           <h1>{navigator.language === "cs-CZ" ? "Těpéro!" : "Hey there!"}</h1>
@@ -223,7 +220,6 @@ function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   )
 }

@@ -891,3 +891,11 @@ main.projects>h1 {
 .langs-sec-border#firebase {
   background: radial-gradient(#FFA513, var(--mainBG));
 }
+
+main>* {
+  z-index: 5;
+}
+
+main:not(.projects) {
+  border-top: 1px rgba(255, 255, 255, 0.14) solid;
+}
