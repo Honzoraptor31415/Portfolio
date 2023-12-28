@@ -92,7 +92,7 @@ body {
     background: linear-gradient(40deg, var(--accent_hover), var(--accent2_hover));
   }
 
-  .nav-side.desktop-menu .link.wrp:nth-child(1) a::after {
+  .nav-side.desktop-menu .link-wrp:nth-child(1):hover a::after {
     width: 50px;
   }
 
