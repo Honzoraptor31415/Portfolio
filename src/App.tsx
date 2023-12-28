@@ -3,6 +3,7 @@ import Home from "./components/Home"
 import Projects from "./components/Projects"
 import Nav from "./components/Nav"
 import Footer from "./components/Footer"
+import Error from "./components/Error"
 
 function App() {
   onload = () => {
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
       <Footer />

@@ -1,3 +1,8 @@
+#root:has(.error)>nav,
+#root:has(.error)>footer {
+  display: none;
+}
+
 :root {
   --mainBG: rgb(20, 20, 26);
   --mainBGNum: 20, 20, 26;
@@ -898,4 +903,36 @@ main>* {
 
 main:not(.projects) {
   border-top: 1px rgba(255, 255, 255, 0.14) solid;
+}
+
+header.error {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.error-wrp {
+  text-align: center;
+}
+
+.error-wrp * {
+  margin-block: 30px;
+}
+
+.error-wrp p {
+  color: grey;
+  font-size: 15pt;
+}
+
+.error-wrp a {
+  color: grey;
+  font-size: 16pt;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.error-wrp a:hover {
+  color: white;
 }
