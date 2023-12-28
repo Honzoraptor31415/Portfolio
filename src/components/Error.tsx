@@ -7,9 +7,9 @@ function Error() {
     <>
       <header className="error">
         <div className="error-wrp">
-          <h1>This page doesn't exist</h1>
+          <h1>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tahle stránka neexistuje" : "This page doesn't exist"}</h1>
           <p>¯\_(ツ)_/¯</p>
-          <a href="/">Homepage</a>
+          <a href="/">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Domovská stránka" : "Homepage"}</a>
         </div>
       </header>
     </>

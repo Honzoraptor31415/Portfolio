@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      {navigator.language === "cs-CZ" ? (
+      {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
         <footer>
           <p className="copyright-shit">&copy; xD HonzoRaptorův web 2023 - {new Date().getFullYear()}</p>
           <p>Něco na tomhle webu nesedí? <a href="https://github.com/Honzoraptor31415/Portfolio">Oprav to na  Githubu.</a></p>

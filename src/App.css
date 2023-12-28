@@ -1,5 +1,6 @@
 #root:has(.error)>nav,
-#root:has(.error)>footer {
+#root:has(.error)>footer,
+#root:has(.error)>#mobile {
   display: none;
 }
 
@@ -36,7 +37,7 @@ html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   scroll-behavior: smooth;
   color: white;
-  scroll-padding-top: 75px;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -45,6 +46,10 @@ body {
 }
 
 @media (min-width: 1000px) {
+  .error-wrp h1 {
+    font-size: auto;
+  }
+
   #mobile {
     display: none;
   }
@@ -69,11 +74,35 @@ body {
     z-index: 999;
   }
 
-  .nav-side a {
+  .nav-side.desktop-menu a {
     color: rgba(255, 255, 255, 0.675);
     text-decoration: none;
     transition: .3s;
     margin-inline: 16px;
+    font-weight: 500;
+  }
+
+  .nav-side.desktop-menu a:not(a:has(img))::after {
+    width: 0;
+    height: 3px;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: .3s;
+    background: linear-gradient(40deg, var(--accent_hover), var(--accent2_hover));
+  }
+
+  .nav-side.desktop-menu .link.wrp:nth-child(1) a::after {
+    width: 50px;
+  }
+
+  .link-wrp {
+    display: grid;
+  }
+
+  .nav-side.desktop-menu .link-wrp:hover a::after {
+    width: 60px;
+    transform: translateY(3px);
   }
 
   .nav-side a:has(img) {
@@ -84,8 +113,10 @@ body {
     filter: invert(0%);
   }
 
-  nav .nav-side a:hover {
+  nav .nav-side .link-wrp:hover a:not(.logo-text, :has(img)) {
     color: white;
+    text-shadow: 0 0 3px white;
+    transform: translateY(-3px);
   }
 
   .nav-side:nth-child(2) {
@@ -113,9 +144,10 @@ body {
     max-width: fit-content;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
+    margin-left: 16px;
   }
 
-  header {
+  header:not(.error) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -262,6 +294,10 @@ body {
 }
 
 @media (max-width: 999px) {
+  .error-wrp h1 {
+    font-size: 20pt;
+  }
+
   #desktop {
     display: none
   }
@@ -397,7 +433,7 @@ body {
     align-items: center;
   }
 
-  header {
+  header:not(.error) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -910,11 +946,13 @@ header.error {
   width: 100%;
   display: flex;
   align-content: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .error-wrp {
   text-align: center;
+  max-width: 80%;
 }
 
 .error-wrp * {
