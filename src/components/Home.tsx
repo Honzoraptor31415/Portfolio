@@ -85,7 +85,7 @@ function Home() {
           )}
         </section>
         <section>
-          <h2 id="langs-techs">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Jazyky a technologie" : "Languages and technogolies"}</h2>
+          <h2 className="hidden" id="langs-techs">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Jazyky a technologie" : "Languages and technologies"}</h2>
           <div id="html-css" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
