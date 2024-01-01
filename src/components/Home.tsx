@@ -173,7 +173,7 @@ function Home() {
               </div>
               <h3>Git</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                <p>Další krok k tomu být lepší vývojář je se naučit záchazet s Gitem a Githubem (nebo GigLabem/BigBucketem, ale Github je nejpoužívanější). Začal jsem se s ním učit zacházet kolem listopadu 2023, což je podle mě docela pozdě. Každopádně, <a href="https://github.com/Honzoraptor31415">tady je můj Github</a>.</p>
+                <p>Další krok k tomu být lepší vývojář je se naučit záchazet s Gitem a Githubem (nebo GigLabem/BitBucketem, ale Github je nejpoužívanější). Začal jsem se s ním učit zacházet kolem listopadu 2023, což je podle mě docela pozdě. Každopádně, <a href="https://github.com/Honzoraptor31415">tady je můj Github</a>.</p>
               ) : (
                 <p>Another step to being a good developer is to learn Git and Github (or GitLab/BitBucket, but Github is the most used one). I started learning Git just around November 2023, which is kinda late in my opinion. Anyways, <a href="https://github.com/Honzoraptor31415">here's my Github</a>.</p>
               )}
@@ -194,7 +194,7 @@ function Home() {
           </div>
         </section>
         <section className="hidden" id="contact">
-          <h2>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Kontakt & sociální sítě" : "Contact & socials"}</h2>
+          <h2>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Kde mě najdeš" : "You can also find me here"}</h2>
           <div className="contact-socials-wrp">
             <div className="socel-wrp hidden">
               <img src="gmail-icon.svg" alt="Gmail icon" />
