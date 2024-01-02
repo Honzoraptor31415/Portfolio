@@ -38,6 +38,7 @@ html {
   scroll-behavior: smooth;
   color: white;
   scroll-padding-top: 90px;
+  font-size: 17px;
 }
 
 body {
@@ -46,6 +47,13 @@ body {
 }
 
 @media (min-width: 1000px) {
+  .socials-element a {
+    color: rgba(255, 255, 255, 0.836);
+    transition: .3s;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
   .error-wrp h1 {
     font-size: auto;
   }
@@ -135,7 +143,7 @@ body {
     letter-spacing: -1px;
     user-select: none;
     cursor: pointer;
-    font-size: 17pt;
+    font-size: 1.5rem;
     background-clip: text;
     text-decoration: none;
     transition: .3s;
@@ -158,12 +166,12 @@ body {
 
   header h1 {
     margin-left: -10px;
-    font-size: 39pt;
+    font-size: 3rem;
     margin-bottom: 30px;
   }
 
   .header-about {
-    font-size: 13pt;
+    font-size: 1.1rem;
     letter-spacing: 2px;
   }
 
@@ -182,7 +190,7 @@ body {
 
   .langs-tech-above {
     height: fit-content;
-    font-size: 12pt;
+    font-size: 1rem;
     color: #ffffffd4;
     text-align: right;
     width: calc(100% - 10px);
@@ -208,7 +216,7 @@ body {
 
   section .about-text {
     margin-left: 15px;
-    font-size: 13pt;
+    font-size: 1rem;
     letter-spacing: 1px;
   }
 
@@ -235,6 +243,7 @@ body {
 
   .socel-wrp img {
     max-height: 50px;
+    min-height: 50px;
     width: auto;
     user-select: none;
     -webkit-user-drag: none;
@@ -270,7 +279,7 @@ body {
     border-top: 1px rgba(255, 255, 255, 0.154) solid;
     display: flex;
     justify-content: space-between;
-    font-size: 14pt;
+    font-size: 1.1rem;
   }
 
   .project-side {
@@ -294,8 +303,15 @@ body {
 }
 
 @media (max-width: 999px) {
+  .socials-element a {
+    color: rgba(255, 255, 255, 0.836);
+    transition: .3s;
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+
   .error-wrp h1 {
-    font-size: 20pt;
+    font-size: 2.5rem;
   }
 
   #desktop {
@@ -387,7 +403,7 @@ body {
     margin-inline: auto;
     padding-block: 12px;
     font-weight: 700;
-    font-size: 14pt;
+    font-size: 1rem;
     border-bottom: 1px rgba(255, 255, 255, 0.14) solid;
   }
 
@@ -420,7 +436,7 @@ body {
     letter-spacing: -1px;
     user-select: none;
     cursor: pointer;
-    font-size: 17pt;
+    font-size: 1.5rem;
     background-clip: text;
     text-decoration: none;
     transition: .3s;
@@ -444,16 +460,16 @@ body {
   }
 
   header h1 {
-    font-size: 34pt;
+    font-size: 2.5rem;
     margin-bottom: 20px;
   }
 
-  header>* {
+  header *:not(header::before, header::after) {
     z-index: 2;
   }
 
   .header-about {
-    font-size: 12pt;
+    font-size: 1rem;
     letter-spacing: 1px;
     max-width: 80%;
   }
@@ -473,7 +489,7 @@ body {
 
   .langs-tech-above {
     height: fit-content;
-    font-size: 12pt;
+    font-size: 1rem;
     color: #ffffffd4;
     text-align: center;
     width: 100%;
@@ -495,20 +511,20 @@ body {
 
   section h2:not(#langs-techs) {
     margin-bottom: 15px;
-    font-size: 17pt;
+    font-size: 1.6rem;
   }
 
   section h2 {
     margin-bottom: 15px;
     text-align: center;
-    font-size: 17pt;
+    font-size: 1.6rem;
   }
 
   .about-text {
     max-width: 95%;
     margin-inline: auto;
     text-align: center;
-    font-size: 12pt;
+    font-size: 1rem;
     letter-spacing: 1px;
   }
 
@@ -522,16 +538,17 @@ body {
   .socel-wrp {
     display: flex;
     gap: 30px;
-    margin-left: 15px;
     animation: socel-scroll cubic-bezier(1, 0.37, 0.58, 1) both;
     animation-timeline: view();
-    animation-range: entry 20% cover 30%
+    animation-range: entry 20% cover 30%;
+    align-items: center;
   }
 
   .socel-wrp img {
-    min-width: 50px;
-    max-width: 50px;
+    min-width: 45px;
+    max-width: 45px;
     height: auto;
+    max-height: 45px;
     user-select: none;
     -webkit-user-drag: none;
     user-select: none;
@@ -570,7 +587,7 @@ body {
     border-top: 1px rgba(255, 255, 255, 0.154) solid;
     display: flex;
     flex-direction: column;
-    font-size: 12pt;
+    font-size: 1.1rem;
     gap: 30px;
     text-align: center;
   }
@@ -681,13 +698,6 @@ p a:hover {
   font-weight: 700;
 }
 
-.socials-element a {
-  color: rgba(255, 255, 255, 0.836);
-  transition: .3s;
-  font-size: 13pt;
-  text-decoration: none;
-}
-
 .socials-element a:hover {
   color: white;
 }
@@ -738,12 +748,12 @@ a.colored-text:hover {
 .no-projects h1 {
   color: rgba(255, 126, 126, 0.634);
   margin-bottom: 30px;
-  font-size: 26pt;
+  font-size: 2.6rem;
 }
 
 .no-projects p {
   color: grey;
-  font-size: 14pt;
+  font-size: 1rem;
 }
 
 main.projects {
@@ -798,7 +808,7 @@ main.projects>h1 {
   padding: 4px 12px;
   margin: 6px;
   border-radius: 4px;
-  font-size: 10pt;
+  font-size: 0.8rem;
   font-style: italic;
   background: #242938;
   font-weight: 600;
@@ -833,7 +843,7 @@ main.projects>h1 {
 }
 
 .tags-wrp>p {
-  font-size: 11pt;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.671);
   margin-bottom: 2px;
 }
@@ -889,7 +899,7 @@ main.projects>h1 {
 }
 
 .pointer-finger {
-  font-size: 16pt;
+  font-size: 1.6rem;
 }
 
 .langs-sec-border {
@@ -961,16 +971,72 @@ header.error {
 
 .error-wrp p {
   color: grey;
-  font-size: 15pt;
+  font-size: 1.2rem;
 }
 
 .error-wrp a {
   color: grey;
-  font-size: 16pt;
+  font-size: 1.4rem;
   text-decoration: none;
   transition: .3s;
 }
 
 .error-wrp a:hover {
   color: white;
+}
+
+.bg-wrp {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(35px);
+  z-index: -1;
+}
+
+.background-element {
+  transition: .3s;
+}
+
+.background-element:nth-child(1) {
+  background: radial-gradient(var(--accent_hover), 10%, var(--mainBG));
+  width: 220px;
+  border-radius: 50%;
+  height: 109px;
+  transform: translateY(-10px);
+  margin-inline: auto;
+}
+
+.background-element:nth-child(2) {
+  background: linear-gradient(50deg, var(--accent2_hover), 10%, var(--mainBG));
+  width: 200px;
+  height: 60px;
+  transform: translateY(10px);
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project .date {
+  color: grey;
+  font-size: 0.9rem;
 }

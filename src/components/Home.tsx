@@ -25,6 +25,10 @@ function Home() {
   return (
     <>
       <header>
+        <div className="bg-wrp">
+          <div className="background-element"></div>
+          <div className="background-element"></div>
+        </div>
         <div className="header-side hidden">
           <h1>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Těpéro!" : "Hey there!"}</h1>
           {navigator.language === "cs-CZ" || navigator.language === "cs" ? (

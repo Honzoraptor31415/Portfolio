@@ -39,7 +39,10 @@ function Projects() {
               </a>
             </div>
             <div className="project-side">
-              <h3>CodeConnect</h3>
+              <div className="project-top">
+                <h3>CodeConnect</h3>
+                <p className="date">10.12. 2023</p>
+              </div>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>CodeConnect je aplikace, která uživatelům umožní zveřejnit dotaz na aplikaci, kterou v dotazu popíšou a kdokoliv z vývojářů (role uživatele) tu aplikaci může pro toho člověka naprogramovat.</p>
               ) : (
