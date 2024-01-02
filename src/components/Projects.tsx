@@ -35,7 +35,7 @@ function Projects() {
           <div className="project hidden">
             <div className="project-side">
               <a href="https://github.com/Honzoraptor31415/CodeConnect">
-                <img src="codeconnectapp-screenshot.png" alt="CodeConnect screenshot" />
+                <img src="codeconnectapp-screenshot.png" className="rounded" alt="CodeConnect screenshot" />
               </a>
             </div>
             <div className="project-side">
@@ -50,8 +50,11 @@ function Projects() {
               )}
               <div className="project-links">
                 <a href="https://github.com/Honzoraptor31415/CodeConnect">
-                  <img src="github-icon.svg" alt="Github icon" />
+                  <img src="github-icon.svg" alt="Download icon" />
                 </a>
+                {/* <a href="https://github.com/Honzoraptor31415/CodeConnect">
+                  <img src="download-icon.svg" alt="Download icon" />
+                </a> */}
                 <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
                 {/* <a href="#">
                   <img src="link-away.svg" alt="Link away icon" />

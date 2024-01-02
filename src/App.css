@@ -775,6 +775,9 @@ main.projects>h1 {
 .project-side img {
   max-width: 100%;
   height: auto;
+}
+
+.project-side .rounded {
   border-radius: 18px;
 }
 
