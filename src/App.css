@@ -461,7 +461,7 @@ body {
   }
 
   header:not(header:has(.login-form)) {
-    padding-top: 75px;
+    padding-top: 95px;
   }
 
   header h1 {
