@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import BlurryBackground from "./BlurryBackground"
 
 function Home() {
   useEffect(() => {
@@ -25,10 +26,7 @@ function Home() {
   return (
     <>
       <header>
-        <div className="bg-wrp">
-          <div className="background-element"></div>
-          <div className="background-element"></div>
-        </div>
+        <BlurryBackground />
         <div className="header-side hidden">
           <h1>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Těpéro!" : "Hey there!"}</h1>
           {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -66,6 +64,9 @@ function Home() {
             </a>
             <a href="#firebase">
               <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" />
+            </a>
+            <a href="#supabase">
+              <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase" />
             </a>
             {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
               <p className="langs-tech-above">Co používám <span className="pointer-finger">👆</span></p>
@@ -193,6 +194,19 @@ function Home() {
                 <p>Je často označovanej jako nejpříjemnější Javascriptová library (to jako knihovna idk). A chápu proč: když píšeš cokoliv ve Sveltu, cítíš se, jako bys psal nějaký vyboostovaný HTML, který umí dělat podmínkový renderování, renderování arrayí (nevim jak na to do češtiny, j. č. je array) a psát proměnný přímo do markup kódu. Je daleko lěhčí v porovnání s Reactem, ale komunita kolem něj není bohužel moc velká. Zrovna teď pracuju na <a href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnectu</a> na kterej používám SvelteKit.</p>
               ) : (
                 <p>Is commonly refered to as the most loved Javascript library. And I understand why: when writing Svelte code, you feel like you're writing some boosted HTML, that can do conditional component rendering, rendering arrays and writing down variables directly into the markup code. It's way easier to learn compared to React, but it's community isn't as big. I'm currentely building <a href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnect</a> with SvelteKit.</p>
+              )}
+            </section>
+          </div>
+          <div id="supabase" className="langs-sec-border hidden">
+            <section className="langs-section">
+              <div className="langs-icons">
+                <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase icon" />
+              </div>
+              <h3>Supabase</h3>
+              {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
+                <p>Často používaná alternativa pro Firebase, kterou jsem začal používat kolem začátku ledna 2024, a to proto, abych mohl tenhle web připojit na nějakou databázi: nejdřív jsem zkusil Firebase, ale prostě to s Reactem nefungovalo, tak proto Supabase.</p>
+              ) : (
+                <p>A widely used Firebase alternative, which I sarted using at the beginning of January 2024, because I wanted to connect this website to a database: first I tried Firebase, but it didn't work out well with React, so that's why Supabase.</p>
               )}
             </section>
           </div>

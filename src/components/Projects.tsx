@@ -1,6 +1,8 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { supabase } from "../supabaseClient"
 
 function Projects() {
+  const [data, setData] = useState<any[]>([])
   useEffect(() => {
     if (navigator.language === "cs-CZ" || navigator.language === "cs") {
       document.title = "Projekty"
@@ -21,6 +23,17 @@ function Projects() {
     hiddenElements.forEach((el) => observer.observe(el))
   }, [])
 
+  const getData = async () => {
+    const res: any = await supabase.from("Projects").select("*")
+
+    setData(res.data)
+
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <>
       <main className="projects">
@@ -32,43 +45,57 @@ function Projects() {
         </div> */}
         <h1>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Moje projekty" : "My projects"}</h1>
         <div className="projects-wrp">
-          <div className="project hidden">
-            <div className="project-side">
-              <a href="https://github.com/Honzoraptor31415/CodeConnect">
-                <img src="codeconnectapp-screenshot.png" className="rounded" alt="CodeConnect screenshot" />
-              </a>
-            </div>
-            <div className="project-side">
-              <div className="project-top">
-                <h3>CodeConnect</h3>
-                <p className="date">10.12. 2023</p>
-              </div>
-              {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                <p>CodeConnect je aplikace, která uživatelům umožní zveřejnit dotaz na aplikaci, kterou v dotazu popíšou a kdokoliv z vývojářů (role uživatele) tu aplikaci může pro toho člověka naprogramovat.</p>
-              ) : (
-                <p>CodeConnect is an app, that you can post requests for apps on. Any of the devs (role for the user) can view the post and code the app that the person described.</p>
-              )}
-              <div className="project-links">
-                <a href="https://github.com/Honzoraptor31415/CodeConnect">
-                  <img src="github-icon.svg" alt="Download icon" />
-                </a>
-                {/* <a href="https://github.com/Honzoraptor31415/CodeConnect">
-                  <img src="download-icon.svg" alt="Download icon" />
-                </a> */}
-                <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
-                {/* <a href="#">
-                  <img src="link-away.svg" alt="Link away icon" />
-                </a> */}
-              </div>
-              <div className="tags-wrp">
-                <p>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tagy:" : "Tags:"}</p>
-                <div className="tags">
-                  <p className="tag svelte-tag">svelte</p>
-                  <p className="tag firebase-tag">firebase</p>
+          {data.map((value, index) => {
+            return (
+              <div key={index} className="project">
+                <div className="project-side">
+                  <a href={value.github}>
+                    <img src={value.img} className="rounded" />
+                  </a>
+                </div>
+                <div className="project-side">
+                  <div className="project-top">
+                    <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? JSON.parse(value.title).cz : JSON.parse(value.title).en}</h3>
+                    <p className="date">{value.date}</p>
+                  </div>
+                  {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
+                    <p>{JSON.parse(value.text).cz}</p>
+                  ) : (
+                    <p>{JSON.parse(value.text).en}</p>
+                  )}
+                  <div className="project-links">
+                    <a href={value.github}>
+                      <img src="github-icon.svg" />
+                    </a>
+                    {value.download === "no xD" ? ("") : (
+                      <a download={value.title} href={value.download}>
+                        <img src="download-icon.svg" />
+                      </a>
+                    )}
+
+                    {value.download === "no xD" && value.link === "no xD" ? (
+                      <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
+                    ) : (
+                      <a href={value.link}>
+                        <img src="link-away.svg" />
+                      </a>
+                    )}
+
+                  </div>
+                  <div className="tags-wrp">
+                    <p>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tagy:" : "Tags:"}</p>
+                    <div className="tags">
+                      {value.tags.split(" ").map((v: any, i: any) => {
+                        return (
+                          <p key={i} className={`tag ${v}-tag`} >{v}</p>
+                        )
+                      })}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            )
+          })}
         </div>
       </main>
     </>

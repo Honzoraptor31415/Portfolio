@@ -4,6 +4,9 @@ import Projects from "./components/Projects"
 import Nav from "./components/Nav"
 import Footer from "./components/Footer"
 import Error from "./components/Error"
+import Login from "./components/Login"
+import Admin from "./components/Admin"
+import New from "./components/New"
 
 function App() {
   onload = () => {
@@ -26,15 +29,22 @@ function App() {
   }
   return (
     <>
-      <Nav />
+      {window.location.pathname === "/admin" || window.location.pathname === "/login" || window.location.pathname === "/new" ? "" : (
+        <Nav />
+      )}
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/new" element={<New />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
-      <Footer />
+      {window.location.pathname === "/admin" || window.location.pathname === "/login" || window.location.pathname === "/new" ? "" : (
+        <Footer />
+      )}
     </>
   )
 }
