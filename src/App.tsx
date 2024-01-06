@@ -10,6 +10,7 @@ import New from "./components/New"
 
 function App() {
   onload = () => {
+    console.log(process.env.REACT_APP_TEST_ENV)
     console.log(`%c
 
 
