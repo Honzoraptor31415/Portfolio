@@ -10,7 +10,6 @@ import New from "./components/New"
 
 function App() {
   onload = () => {
-    console.log(process.env.REACT_APP_TEST_ENV)
     console.log(`%c
 
 
@@ -30,9 +29,7 @@ function App() {
   }
   return (
     <>
-      {window.location.pathname === "/admin" || window.location.pathname === "/login" || window.location.pathname === "/new" ? "" : (
-        <Nav />
-      )}
+      {window.location.pathname === "/" || window.location.pathname === "/projects" ? (<Nav />) : ""}
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -43,9 +40,7 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
-      {window.location.pathname === "/admin" || window.location.pathname === "/login" || window.location.pathname === "/new" ? "" : (
-        <Footer />
-      )}
+      {window.location.pathname === "/" || window.location.pathname === "/projects" ? (<Footer />) : ""}
     </>
   )
 }
