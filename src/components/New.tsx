@@ -37,18 +37,21 @@ function New() {
   }
 
   const handleSubmit = async () => {
-    const res = await supabase.from("Projects").insert(
-      {
-        title: title,
-        date: date ? date : `${new Date().getDay()}.${new Date().getMonth() + 1}.${new Date().getFullYear()}`,
-        img: imgUrl,
-        github: githubLink,
-        link: url ? url : "no xD",
-        download: download ? download : "no xD",
-        text: text,
-        tags: tags
-      }).select("*").single()
-    console.log(res)
+    const { data: { user } } = await supabase.auth.getUser()
+    if (user) {
+      const res = await supabase.from("Projects").insert(
+        {
+          title: title,
+          date: date ? date : `${new Date().getDay()}.${new Date().getMonth() + 1}.${new Date().getFullYear()}`,
+          img: imgUrl,
+          github: githubLink,
+          link: url ? url : "no xD",
+          download: download ? download : "no xD",
+          text: text,
+          tags: tags
+        }).select("*").single()
+      console.log(res)
+    }
   }
 
   return (
