@@ -214,34 +214,42 @@ function Home() {
         <section className="hidden" id="contact">
           <h2>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Kde mě najdeš" : "You can also find me here"}</h2>
           <div className="contact-socials-wrp">
-            <div className="socel-wrp hidden">
-              <img src="gmail-icon.svg" alt="Gmail icon" />
-              <div className="socials-element">
-                <h3>Email</h3>
-                <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Nebo mi prostě napiš na instagramu" : "Or you can just DM me on instagram"} href="mailto:honzoraptor@gmail.com">Honzoraptor@gmail.com</a>
+            <a href="mailto:honzoraptor@gmail.com" className="socel-container hidden">
+              <div className="socel-wrp">
+                <img src="gmail-icon.svg" alt="Gmail icon" />
+                <div className="socials-element">
+                  <h3>Email</h3>
+                  <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Nebo mi prostě napiš na instagramu" : "Or you can just DM me on instagram"} href="mailto:honzoraptor@gmail.com">Honzoraptor@gmail.com</a>
+                </div>
               </div>
-            </div>
-            <div className="socel-wrp hidden">
-              <img src="github-icon.svg" alt="Github icon" />
-              <div className="socials-element">
-                <h3>Github</h3>
-                <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tady najdeš vše, co jsem kdy naprogramoval (ne tak docela)" : "Here you'll find everything I've ever coded (sort of)"} href="https://github.com/Honzoraptor31415">Honzoraptor31415</a>
+            </a>
+            <a href="https://github.com/Honzoraptor31415" className="socel-container hidden">
+              <div className="socel-wrp">
+                <img src="github-icon.svg" alt="Github icon" />
+                <div className="socials-element">
+                  <h3>Github</h3>
+                  <p title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tady najdeš vše, co jsem kdy naprogramoval (ne tak docela)" : "Here you'll find everything I've ever coded (sort of)"}>Honzoraptor31415</p>
+                </div>
               </div>
-            </div>
-            <div className="socel-wrp hidden">
-              <img src="instagram-icon.svg" alt="Instagram icon" />
-              <div className="socials-element">
-                <h3>Instagram</h3>
-                <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tady jsem zrovna začal postovat" : "I just started posting here"} href="https://www.instagram.com/honzoraptor/">@honzoraptor</a>
+            </a>
+            <a href="https://www.instagram.com/honzoraptor/" className="socel-container hidden">
+              <div className="socel-wrp">
+                <img src="instagram-icon.svg" alt="Instagram icon" />
+                <div className="socials-element">
+                  <h3>Instagram</h3>
+                  <p title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tady jsem zrovna začal postovat" : "I just started posting here"}>@honzoraptor</p>
+                </div>
               </div>
-            </div>
-            <div className="socel-wrp hidden">
-              <img src="itch-icon.svg" alt="Itch icon" />
-              <div className="socials-element">
-                <h3>Itch.io</h3>
-                <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Už moc hry nedělám (udělal jsem zatím jenom jednu xD)" : "I don't really make games anymore (I made just one in my life xD)"} href="https://honzoraptor.itch.io/">honzoraptor.itch.io</a>
+            </a>
+            <a href="https://honzoraptor.itch.io/" className="socel-container hidden">
+              <div className="socel-wrp">
+                <img src="itch-icon.svg" alt="Itch icon" />
+                <div className="socials-element">
+                  <h3>Itch.io</h3>
+                  <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Už moc hry nedělám (udělal jsem zatím jenom jednu xD)" : "I don't really make games anymore (I made just one in my life xD)"} href="https://honzoraptor.itch.io/">honzoraptor.itch.io</a>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </section>
       </main>
