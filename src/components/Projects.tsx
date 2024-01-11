@@ -1,38 +1,38 @@
 import { useEffect, useState } from "react"
-// import { supabase } from "../supabaseClient"
+import { supabase } from "../supabaseClient"
 
 function Projects() {
-  // const [data, setData] = useState<any[]>([])
-  // useEffect(() => {
-  //   if (navigator.language === "cs-CZ" || navigator.language === "cs") {
-  //     document.title = "Projekty"
-  //   } else {
-  //     document.title = "Projects"
-  //   }
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add("show")
-  //       } else {
-  //         entry.target.classList.remove("show")
-  //       }
-  //     })
-  //   })
-  //   const hiddenElements = document.querySelectorAll(".hidden")
+  const [data, setData] = useState<any[]>([])
+  useEffect(() => {
+    if (navigator.language === "cs-CZ" || navigator.language === "cs") {
+      document.title = "Projekty"
+    } else {
+      document.title = "Projects"
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show")
+        } else {
+          entry.target.classList.remove("show")
+        }
+      })
+    })
+    const hiddenElements = document.querySelectorAll(".hidden")
 
-  //   hiddenElements.forEach((el) => observer.observe(el))
-  // }, [])
+    hiddenElements.forEach((el) => observer.observe(el))
+  }, [])
 
-  // const getData = async () => {
-  //   const res: any = await supabase.from("Projects").select("*")
+  const getData = async () => {
+    const res: any = await supabase.from("Projects").select("*")
 
-  //   setData(res.data)
+    setData(res.data)
 
-  // }
+  }
 
-  // useEffect(() => {
-  //   getData()
-  // }, [])
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <>
@@ -45,7 +45,7 @@ function Projects() {
         </div> */}
         <h1>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Moje projekty" : "My projects"}</h1>
         <div className="projects-wrp">
-          {/* {data.map((value, index) => {
+          {data.map((value, index) => {
             return (
               <div key={index} className="project">
                 <div className="project-side">
@@ -95,7 +95,7 @@ function Projects() {
                 </div>
               </div>
             )
-          })} */}
+          })}
         </div>
       </main>
     </>
