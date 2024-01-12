@@ -45,7 +45,7 @@ function Projects() {
         </div> */}
         <h1>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Moje projekty" : "My projects"}</h1>
         <div className="projects-wrp">
-          {data.map((value, index) => {
+          {data.reverse().map((value, index) => {
             return (
               <div key={index} className="project">
                 <div className="project-side">
