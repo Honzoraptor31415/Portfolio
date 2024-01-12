@@ -82,11 +82,11 @@ function New() {
           <div className="titles">
             <div className="title">
               <label htmlFor="title">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Titulek (CZ)" : "Title (CZ)"}</label>
-              <input required type="text" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Titulek (CZ)" : "Title (CZ)"} id="title" onChange={handleCZTitleChange} value={CZtitle} />
+              <input required type="text" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Titulek (CZ)" : "Title (CZ)"} id="CZTitle" onChange={handleCZTitleChange} value={CZtitle} />
             </div>
             <div className="title">
               <label htmlFor="title">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Titulek (EN)" : "Title (EN)"}</label>
-              <input required type="text" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Titulek (EN)" : "Title (EN)"} id="title" onChange={handleENTitleChange} value={ENTitle} />
+              <input required type="text" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Titulek (EN)" : "Title (EN)"} id="ENTitle" onChange={handleENTitleChange} value={ENTitle} />
             </div>
           </div>
 
@@ -119,12 +119,12 @@ function New() {
 
           <div className="text-title">
             <label htmlFor="text">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Text (CZ)" : "Text (CZ)"}</label>
-            <textarea placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Text (CZ)" : "Text (CZ)"} required id="text" onChange={handleCZTextChange} value={CZText} ></textarea>
+            <textarea placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Text (CZ)" : "Text (CZ)"} required id="CZText" onChange={handleCZTextChange} value={CZText} ></textarea>
           </div>
 
           <div className="text-title">
             <label htmlFor="text">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Text (EN)" : "Text (EN)"}</label>
-            <textarea placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Text (EN)" : "Text (EN)"} required id="text" onChange={handleENTextChange} value={ENText} ></textarea>
+            <textarea placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Text (EN)" : "Text (EN)"} required id="ENText" onChange={handleENTextChange} value={ENText} ></textarea>
           </div>
 
           <label htmlFor="tags">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Tagy" : "Tags"}</label>
