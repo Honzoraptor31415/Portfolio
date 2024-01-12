@@ -240,7 +240,7 @@ body {
     margin-left: 16px;
   }
 
-  header:not(.new) {
+  header:not(.new, .login-form) {
     display: flex;
     justify-content: space-between;
     align-items: center;
