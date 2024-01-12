@@ -389,6 +389,10 @@ body {
     margin-block: 30px;
   }
 
+  .project:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
   .menu-line {
     display: none;
   }
@@ -981,10 +985,6 @@ main.projects>h1 {
   gap: 20px;
 }
 
-.project:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
 .project-side:has(img) {
   display: grid;
   align-items: center;
@@ -1039,7 +1039,7 @@ main.projects>h1 {
 }
 
 .supabase-tag {
-  color: #249361;
+  color: #3ECF8E;
 }
 
 .tags-wrp>p {
