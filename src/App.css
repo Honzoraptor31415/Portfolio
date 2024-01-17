@@ -1010,7 +1010,7 @@ main.projects>h1 {
   font-weight: 600;
 }
 
-.js-tag {
+.javascript-tag {
   color: #F0DB4F;
 }
 
@@ -1026,11 +1026,19 @@ main.projects>h1 {
   color: #E14E1D;
 }
 
-.ts-tag {
+.css-tag {
+  color: #0277BD;
+}
+
+.sass-tag {
+  color: #cd669b;
+}
+
+.typescript-tag {
   color: #007ACC;
 }
 
-.py-tag {
+.python-tag {
   color: #FFD242;
 }
 
