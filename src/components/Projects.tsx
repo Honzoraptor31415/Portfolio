@@ -50,7 +50,7 @@ function Projects() {
               <div key={index} className="project">
                 <div className="project-side">
                   <a href={value.github}>
-                    <img src={value.img} className="rounded" />
+                    <img src={`./${value.img}`} className="rounded" />
                   </a>
                 </div>
                 <div className="project-side">
@@ -65,11 +65,11 @@ function Projects() {
                   )}
                   <div className="project-links">
                     <a href={value.github}>
-                      <img src="github-icon.svg" />
+                      <img src="./github-icon.svg" />
                     </a>
                     {value.download === "no xD" ? ("") : (
                       <a download={value.title} href={value.download}>
-                        <img src="download-icon.svg" />
+                        <img src="./download-icon.svg" />
                       </a>
                     )}
 
@@ -77,7 +77,7 @@ function Projects() {
                       <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
                     ) : (
                       <a href={value.link}>
-                        <img src="link-away.svg" />
+                        <img src="./link-away.svg" />
                       </a>
                     )}
 
