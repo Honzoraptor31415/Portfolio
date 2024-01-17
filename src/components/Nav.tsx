@@ -19,14 +19,14 @@ function Nav() {
             <a href="/projects">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Projekty" : "Projects"}</a>
           </div>
           <a href="https://github.com/Honzoraptor31415">
-            <img src="github-icon.svg" alt="Github icon" />
+            <img src="/github-icon.svg" alt="Github icon" />
           </a>
         </div>
       </nav>
       <div id="mobile">
         <nav>
           <a href="https://github.com/Honzoraptor31415">
-            <img src="github-icon.svg" alt="Github icon" />
+            <img src="/github-icon.svg" alt="Github icon" />
           </a>
           <a href="/" className="logo-text" data-title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}</a>
           <button onClick={() => { setNavState(0) }}>

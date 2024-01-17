@@ -50,7 +50,7 @@ function Projects() {
               <div key={index} className="project">
                 <div className="project-side">
                   <a href={value.github}>
-                    <img src={`/${value.img}`} className="rounded" />
+                    <img src={value.img} className="rounded" />
                   </a>
                 </div>
                 <div className="project-side">
