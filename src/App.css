@@ -132,10 +132,10 @@ body {
     border-radius: 12px;
   }
 
-  .socials-element a {
+  .socials-element p {
     color: rgba(255, 255, 255, 0.836);
     transition: .3s;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
   }
 
@@ -399,7 +399,7 @@ body {
 }
 
 @media (max-width: 999px) {
-  .socials-element a {
+  .socials-element p {
     color: rgba(255, 255, 255, 0.836);
     transition: .3s;
     font-size: 1rem;
@@ -895,7 +895,7 @@ p a:hover {
   font-weight: 700;
 }
 
-.socials-element a:hover {
+.socials-element p:hover {
   color: white;
 }
 
@@ -1326,21 +1326,37 @@ input:focus::placeholder {
 }
 
 .socel-container:hover {
-  transform: scale(1.03);
+  transform: scale(1.01) translateY(-3px);
 }
 
 .socel-container:nth-child(1) {
   background: radial-gradient(#4285F4, var(--mainBG));
 }
 
+.socel-container:nth-child(1):hover {
+  box-shadow: 0 1px 4px #4285F4;
+}
+
 .socel-container:nth-child(2) {
   background: radial-gradient(white, var(--mainBG));
+}
+
+.socel-container:nth-child(2):hover {
+  box-shadow: 0 1px 4px white;
 }
 
 .socel-container:nth-child(3) {
   background: radial-gradient(#B8457E, var(--mainBG));
 }
 
+.socel-container:nth-child(3):hover {
+  box-shadow: 0 1px 4px #B8457E;
+}
+
 .socel-container:nth-child(4) {
   background: radial-gradient(#FF5C5C, var(--mainBG));
+}
+
+.socel-container:nth-child(4):hover {
+  box-shadow: 0 1px 4px #FF5C5C;
 }

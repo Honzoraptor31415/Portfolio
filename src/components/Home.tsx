@@ -214,12 +214,12 @@ function Home() {
         <section className="hidden" id="contact">
           <h2>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Kde mě najdeš" : "You can also find me here"}</h2>
           <div className="contact-socials-wrp">
-            <a href="mailto:honzoraptor@gmail.com" className="socel-container hidden">
+            <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Nebo mi prostě napiš na instagramu" : "Or you can just DM me on instagram"} href="mailto:honzoraptor@gmail.com" className="socel-container hidden">
               <div className="socel-wrp">
                 <img src="gmail-icon.svg" alt="Gmail icon" />
                 <div className="socials-element">
                   <h3>Email</h3>
-                  <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Nebo mi prostě napiš na instagramu" : "Or you can just DM me on instagram"} href="mailto:honzoraptor@gmail.com">Honzoraptor@gmail.com</a>
+                  <p>Honzoraptor@gmail.com</p>
                 </div>
               </div>
             </a>
@@ -241,12 +241,12 @@ function Home() {
                 </div>
               </div>
             </a>
-            <a href="https://honzoraptor.itch.io/" className="socel-container hidden">
+            <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Už moc hry nedělám (udělal jsem zatím jenom jednu xD)" : "I don't really make games anymore (I made just one in my life xD)"} href="https://honzoraptor.itch.io/" className="socel-container hidden">
               <div className="socel-wrp">
                 <img src="itch-icon.svg" alt="Itch icon" />
                 <div className="socials-element">
                   <h3>Itch.io</h3>
-                  <a title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Už moc hry nedělám (udělal jsem zatím jenom jednu xD)" : "I don't really make games anymore (I made just one in my life xD)"} href="https://honzoraptor.itch.io/">honzoraptor.itch.io</a>
+                  <p>honzoraptor.itch.io</p>
                 </div>
               </div>
             </a>
