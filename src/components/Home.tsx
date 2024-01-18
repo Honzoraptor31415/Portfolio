@@ -21,6 +21,9 @@ function Home() {
     const hiddenElements = document.querySelectorAll(".hidden")
 
     hiddenElements.forEach((el) => observer.observe(el))
+    if (location.hash !== "") {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView()
+    }
   }, [])
 
   return (
