@@ -16,7 +16,6 @@ function New() {
   const [imgUrl, setImgUrl] = useState("")
   const [githubLink, setGithubLink] = useState("")
   const [url, setUrl] = useState("")
-  const [download, setDownload] = useState("")
   const [CZText, setCZText] = useState("")
   const [ENText, setENText] = useState("")
   const [tags, setTags] = useState("")
@@ -37,8 +36,6 @@ function New() {
     setGithubLink(e.target.value);
   }; const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUrl(e.target.value)
-  }; const handleDownloadChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setDownload(e.target.value);
   };
 
   const handleCZTextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -62,7 +59,6 @@ function New() {
           img: imgUrl,
           github: githubLink,
           link: url ? url : "no xD",
-          download: download ? download : "no xD",
           text: `{"cz":"${CZText}","en":"${ENText}"}`,
           tags: tags
         }).select("*").single()
@@ -77,7 +73,6 @@ function New() {
           <BlurryBackground />
         </div>
         <div className="post-form">
-          {/* <h2 style={{ textAlign: "center" }}>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Tahle stránka se teprve dodělává, vypadni" : "This page is currentely being made, pls fck off"}</h2> */}
           <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Nový projekt" : "New project"}</h3>
           <div className="titles">
             <div className="title">
@@ -109,11 +104,6 @@ function New() {
             <div className="title">
               <label htmlFor="url">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odkaz na web" : "Deployment link"}</label>
               <input placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odkaz na web" : "Deployment link"} type="url" id="url" onChange={handleUrlChange} value={url} />
-            </div>
-
-            <div className="title">
-              <label htmlFor="download">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odkaz na stažení" : "Download link"}</label>
-              <input placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odkaz na stažení" : "Download link"} type="text" id="download" onChange={handleDownloadChange} value={download} />
             </div>
           </div>
 
