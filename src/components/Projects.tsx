@@ -67,13 +67,8 @@ function Projects() {
                     <a href={value.github}>
                       <img src="/github-icon.svg" />
                     </a>
-                    {value.download !== "no xD" && value.link === "no xD" ? (
-                      <a download={value.title} href={value.download}>
-                        <img src="/download-icon.svg" />
-                      </a>
-                    ) : ("")}
 
-                    {value.download === "no xD" && value.link === "no xD" ? (
+                    {value.link === "no xD" ? (
                       <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
                     ) : (
                       <a href={value.link}>
