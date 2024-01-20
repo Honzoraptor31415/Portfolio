@@ -19,16 +19,13 @@ function New() {
   const [CZText, setCZText] = useState("")
   const [ENText, setENText] = useState("")
   const [tags, setTags] = useState("")
+  const [isWeb, setIsWeb] = useState("")
 
   const handleCZTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCZTitle(e.target.value)
-  };
-
-  const handleENTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  }; const handleENTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setENTitle(e.target.value)
-  };
-
-  const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
+  }; const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
     setDate(e.target.value)
   }; const handleImgUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
     setImgUrl(e.target.value)
@@ -36,18 +33,15 @@ function New() {
     setGithubLink(e.target.value);
   }; const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUrl(e.target.value)
-  };
-
-  const handleCZTextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  }; const handleCZTextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setCZText(e.target.value)
-  };
-
-  const handleENTextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  }; const handleENTextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setENText(e.target.value)
-  };
-  const handleTagsChange = (e: ChangeEvent<HTMLInputElement>) => {
+  }; const handleTagsChange = (e: ChangeEvent<HTMLInputElement>) => {
     setTags(e.target.value)
-  }
+  }; const handleIsWebChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setIsWeb(e.target.value)
+  };
 
   const handleSubmit = async () => {
     const { data: { user } } = await supabase.auth.getUser()
@@ -60,7 +54,8 @@ function New() {
           github: githubLink,
           link: url ? url : "no xD",
           text: `{"cz":"${CZText}","en":"${ENText}"}`,
-          tags: tags
+          tags: tags,
+          web: isWeb
         }).select("*").single()
       console.log(res)
     }
@@ -85,9 +80,18 @@ function New() {
             </div>
           </div>
 
-          <div className="title">
-            <label htmlFor="date">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Datum" : "Date"}</label>
-            <input type="text" id="date" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Datum" : "Date"} onChange={handleDateChange} value={date} />
+          <div className="links">
+            <div className="title">
+              <label htmlFor="date">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Datum" : "Date"}</label>
+              <input type="text" id="date" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Datum" : "Date"} onChange={handleDateChange} value={date} />
+            </div>
+            <div className="title">
+              <label htmlFor="web">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Web" : "Web"}</label>
+              <select id="web" onChange={handleIsWebChange} value={isWeb}>
+                <option value="yes">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Jop" : "Yes"}</option>
+                <option value="no">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Ne" : "No"}</option>
+              </select>
+            </div>
           </div>
 
           <div className="links">

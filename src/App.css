@@ -100,7 +100,8 @@ body {
 
   .post-form input,
   .post-form textarea,
-  .post-form button {
+  .post-form button,
+  .post-form select {
     border-radius: 14px;
     background: transparent;
     backdrop-filter: blur(20px);
@@ -312,10 +313,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-  }
-
-  .socials-element {
-    width: 36%;
   }
 
   .socel-wrp {
@@ -781,7 +778,8 @@ body {
 
   .post-form input,
   .post-form textarea,
-  .post-form button {
+  .post-form button,
+  .post-form select {
     border-radius: 14px;
     background: transparent;
     backdrop-filter: blur(20px);
@@ -1314,14 +1312,19 @@ header.error {
   background-position-x: 53px;
 }
 
-input:hover {
+textarea:hover,
+input:hover,
+select:hover {
   border-color: rgba(255, 255, 255, 0.699);
 }
 
-input:focus {
+textarea:focus,
+input:focus,
+select:focus {
   border-color: white;
 }
 
+textarea:focus::placeholder,
 input:focus::placeholder {
   color: white;
 }
@@ -1367,4 +1370,20 @@ input:focus::placeholder {
 
 .socel-container:nth-child(4):hover {
   box-shadow: 0 1px 4px #FF5C5C;
+}
+
+.post-form select {
+  width: fit-content;
+  box-sizing: border-box;
+  min-width: 100%;
+  color: grey;
+}
+
+.post-form option {
+  background: var(--mainBG);
+  backdrop-filter: blur(20px);
+}
+
+.post-form textarea {
+  resize: vertical;
 }

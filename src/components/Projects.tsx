@@ -25,9 +25,7 @@ function Projects() {
 
   const getData = async () => {
     const res: any = await supabase.from("Projects").select("*")
-
     setData(res.data)
-
   }
 
   useEffect(() => {
@@ -64,16 +62,33 @@ function Projects() {
                     <p>{JSON.parse(value.text).en}</p>
                   )}
                   <div className="project-links">
-                    <a href={value.github}>
-                      <img src="/github-icon.svg" />
-                    </a>
 
-                    {value.link === "no xD" ? (
-                      <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
-                    ) : (
-                      <a href={value.link}>
-                        <img src="/link-away.svg" />
+                    {value.web === "no" ? (
+                      <a href={value.github}>
+                        <img src="/github-icon.svg" />
                       </a>
+                    ) : ("")}
+
+                    {value.web === "yes" && value.link !== "no xD" ? (
+                      <>
+                        <a href={value.github}>
+                          <img src="/github-icon.svg" />
+                        </a>
+                        <a href={value.link}>
+                          <img src="/link-away.svg" />
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        {value.web === "yes" ? (
+                          <>
+                            <a href={value.github}>
+                              <img src="/github-icon.svg" />
+                            </a>
+                            <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
+                          </>
+                        ) : ("")}
+                      </>
                     )}
 
                   </div>
