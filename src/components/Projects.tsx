@@ -3,6 +3,7 @@ import { supabase } from "../supabaseClient"
 
 function Projects() {
   const [data, setData] = useState<any[]>([])
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   useEffect(() => {
     if (navigator.language === "cs-CZ" || navigator.language === "cs") {
       document.title = "Projekty"
@@ -25,6 +26,17 @@ function Projects() {
 
   const getData = async () => {
     const res: any = await supabase.from("Projects").select("*")
+    /*  Date formating  */
+    // res.data[0].date.split(".") = ex. ["10", "12", " 2023"]
+    // res.data[0].date.split(".")[2].slice(1) = ex "2023" (cleans the whitespace)
+    res.data.sort((a: any, b: any) => {
+      try {
+        return new Date(`${b.date.split(".")[0]} ${months[b.date.split(".")[1] - 1]}, ${b.date.split(".")[2].slice(1)}`).valueOf() - new Date(`${a.date.split(".")[0]} ${months[a.date.split(".")[1] - 1]}, ${a.date.split(".")[2].slice(1)}`).valueOf()
+      } catch (error) {
+        console.error('An error occured while sorting the projects:', error)
+        return 0
+      }
+    })
     setData(res.data)
   }
 
@@ -43,7 +55,7 @@ function Projects() {
         </div> */}
         <h1>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Moje projekty" : "My projects"}</h1>
         <div className="projects-wrp">
-          {data.reverse().map((value, index) => {
+          {data.map((value, index) => {
             return (
               <div key={index} className="project">
                 <div className="project-side">
@@ -54,7 +66,10 @@ function Projects() {
                 <div className="project-side">
                   <div className="project-top">
                     <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? JSON.parse(value.title).cz : JSON.parse(value.title).en}</h3>
-                    <p className="date">{value.date}</p>
+                    {/* value.date.split(".") = ex. ["10", "12", " 2023"] 
+
+                    value.date.split(".")[2].slice(1) = ex "2023" (cleans the whitespace for the year) */}
+                    <p className="date">{value.date.split(".")[0].length < 2 ? `0${value.date.split(".")[0]}` : value.date.split(".")[0]}.{value.date.split(".")[1].length < 2 ? `0${value.date.split(".")[1]}` : value.date.split(".")[1]}. {value.date.split(".")[2].slice(1)}</p>
                   </div>
                   {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                     <p>{JSON.parse(value.text).cz}</p>
