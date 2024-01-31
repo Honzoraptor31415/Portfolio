@@ -29,7 +29,7 @@ function App() {
   }
   return (
     <>
-      {window.location.pathname === "/" || window.location.pathname === "/projects" || window.location.pathname === "/projects/" ? (<Nav />) : ""}
+      {window.location.pathname === "/" || window.location.pathname === "/projects" || window.location.pathname === "/projects/" || window.location.pathname === "/admin" ? (<Nav />) : ""}
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -40,7 +40,7 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
-      {window.location.pathname === "/" || window.location.pathname === "/projects" || window.location.pathname === "/projects/" ? (<Footer />) : ""}
+      {window.location.pathname === "/" || window.location.pathname === "/projects" || window.location.pathname === "/projects/" || window.location.pathname === "/admin" ? (<Footer />) : ""}
     </>
   )
 }
