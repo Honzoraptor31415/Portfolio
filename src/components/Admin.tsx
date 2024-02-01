@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 function Admin() {
   useEffect(() => {
@@ -9,9 +9,9 @@ function Admin() {
     }
   }, [])
 
-  function deletePost(el: string) {
-    console.log(el)
-  }
+  // function deletePost(el: string) {
+  //   console.log(el)
+  // }
 
   return (
     <>
@@ -23,8 +23,8 @@ function Admin() {
           <div className="project">
             <div className="project-side">
               <a href="#">
-                {/* <img src={value.img} className="rounded" /> */}
-      {/* </a>
+                <img src={value.img} className="rounded" /> 
+              </a>
             </div>
             <div className="project-side">
               <div className="project-top">
