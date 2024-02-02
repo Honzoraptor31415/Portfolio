@@ -55,10 +55,6 @@ body {
 }
 
 @media (min-width: 1000px) {
-  .popup {
-    width: 700px;
-  }
-
   .titles {
     display: flex;
     gap: 30px;
@@ -410,10 +406,6 @@ body {
 }
 
 @media (max-width: 999px) {
-  .popup {
-    width: 90%;
-  }
-
   .socials-element p {
     color: rgba(255, 255, 255, 0.836);
     transition: .3s;
@@ -1522,10 +1514,10 @@ main.admin {
   overflow: hidden;
   transform: translate(-90%, -17%);
   cursor: default;
-  animation: show-it .15s forwards;
+  animation: show-popup .15s forwards;
 }
 
-@keyframes show-it {
+@keyframes show-popup {
   from {
     opacity: 0;
     transform: scaleY(0) translate(-90%, -17%);

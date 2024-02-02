@@ -38,10 +38,6 @@ function Projects() {
       }
     })
     setData(res.data)
-
-    if (location.hash !== "") {
-      document.getElementById(location.hash.slice(1))?.scrollIntoView()
-    }
   }
 
   useEffect(() => {
@@ -68,7 +64,11 @@ function Projects() {
         <div className="projects-wrp">
           {data.map((value, index) => {
             return (
-              <div key={index} className="project" id={JSON.parse(value.title).en.replaceAll(" ", "-")}>
+              <div onLoad={() => {
+                if (location.hash !== "") {
+                  document.getElementById(location.hash.slice(1))?.scrollIntoView()
+                }
+              }} key={index} className="project" id={JSON.parse(value.title).en.replaceAll(" ", "-")}>
                 <div className="project-side">
                   <a href={value.github}>
                     <img src={value.img} className="rounded" />
