@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import { supabase } from "../supabaseClient"
+import { supabase } from "../../supabaseClient"
 
 function Projects() {
   const [data, setData] = useState<any[]>([])
+  const [copied, setCopied] = useState(false)
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   useEffect(() => {
     if (navigator.language === "cs-CZ" || navigator.language === "cs") {
@@ -20,7 +21,6 @@ function Projects() {
       })
     })
     const hiddenElements = document.querySelectorAll(".hidden")
-
     hiddenElements.forEach((el) => observer.observe(el))
   }, [])
 
@@ -38,11 +38,22 @@ function Projects() {
       }
     })
     setData(res.data)
+
+    if (location.hash !== "") {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView()
+    }
   }
 
   useEffect(() => {
     getData()
   }, [])
+
+  async function clipboardWrite(url: string) {
+    const type = "text/plain";
+    const blob = new Blob([url], { type });
+    const data = [new ClipboardItem({ [type]: blob })];
+    await navigator.clipboard.write(data);
+  }
 
   return (
     <>
@@ -57,7 +68,7 @@ function Projects() {
         <div className="projects-wrp">
           {data.map((value, index) => {
             return (
-              <div key={index} className="project">
+              <div key={index} className="project" id={JSON.parse(value.title).en.replaceAll(" ", "-")}>
                 <div className="project-side">
                   <a href={value.github}>
                     <img src={value.img} className="rounded" />
@@ -77,7 +88,6 @@ function Projects() {
                     <p>{JSON.parse(value.text).en}</p>
                   )}
                   <div className="project-links">
-
                     {value.web === "no" ? (
                       <a href={value.github}>
                         <img src="/github-icon.svg" />
@@ -107,14 +117,38 @@ function Projects() {
                     )}
 
                   </div>
-                  <div className="tags-wrp">
-                    <p>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tagy:" : "Tags:"}</p>
-                    <div className="tags">
-                      {value.tags.split(" ").map((v: any, i: any) => {
-                        return (
-                          <p key={i} className={`tag ${v}-tag`} >{v}</p>
-                        )
-                      })}
+                  <div className="project-bottom-wrp">
+                    <div className="tags-wrp">
+                      <p>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tagy:" : "Tags:"}</p>
+                      <div className="tags">
+                        {value.tags.split(" ").map((v: any, i: any) => {
+                          return (
+                            <p key={i} className={`tag ${v}-tag`} >{v}</p>
+                          )
+                        })}
+                      </div>
+                    </div>
+                    <div className="popover-wrp">
+                      <button id={`btn-${index}`} className="three-dots-btn popover-btn">
+                        <img className="three-dots-vertical" src="/three-dots-vertical-icon.svg" alt="" />
+                        <div id={`popover-${index}`} className="popover">
+                          <a onClick={() => {
+                            setCopied(true)
+                            setTimeout(() => {
+                              setCopied(false)
+                              document.getElementById(`btn-${index}`)?.blur()
+                            }, 1000);
+                            clipboardWrite(`https://honzoraptor.vercel.app/projects#${JSON.parse(value.title).en.replaceAll(" ", "-")}`)
+                          }} className="popover-link">
+                            <img className="popover-icon" src="/copy-icon.svg" />
+                            {copied ? (
+                              <span style={{ color: "lime" }}>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Zkopírováno!" : "Link copied!"}</span>
+                            ) : (
+                              <span>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Kopírovat odkaz" : "Copy link"}</span>
+                            )}
+                          </a>
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>

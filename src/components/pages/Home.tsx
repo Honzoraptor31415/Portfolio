@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import BlurryBackground from "./BlurryBackground"
+import BlurryBackground from "../BlurryBackground"
 
 function Home() {
   useEffect(() => {

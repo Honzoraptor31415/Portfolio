@@ -1,6 +1,6 @@
 import { ChangeEvent, useState, useEffect } from "react";
-import BlurryBackground from "./BlurryBackground";
-import { supabase } from "../supabaseClient";
+import BlurryBackground from "../BlurryBackground";
+import { supabase } from "../../supabaseClient";
 
 function New() {
   useEffect(() => {

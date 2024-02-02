@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Home from "./components/Home"
-import Projects from "./components/Projects"
+import Home from "./components/pages/Home"
+import Projects from "./components/pages/Projects"
 import Nav from "./components/Nav"
 import Footer from "./components/Footer"
-import Error from "./components/Error"
-import Login from "./components/Login"
-import Admin from "./components/Admin"
-import New from "./components/New"
+import Error from "./components/pages/Error"
+import Login from "./components/pages/Login"
+import Admin from "./components/pages/Admin"
+import New from "./components/pages/New"
 
 function App() {
   onload = () => {
