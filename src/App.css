@@ -400,7 +400,6 @@ body {
     margin: 1px;
     border-radius: 18px;
     display: flex;
-
     flex-direction: column;
     gap: 30px;
     background: var(--secBG);
@@ -628,7 +627,6 @@ body {
   }
 
   section:not(.langs-section, .go-to-section) {
-
     padding: 50px 15px;
     width: 100%;
   }
@@ -822,7 +820,6 @@ body {
   .go-to-section {
     width: 100%;
     padding: 20px 20px;
-
     margin: 1px;
     border-radius: 18px;
     background: var(--secBG);
@@ -831,8 +828,10 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-
     padding-inline: 5px;
+  }
+
+  .go-to-section h3 {
     text-align: center;
   }
 
@@ -1615,6 +1614,7 @@ main.admin {
 
 section p {
   color: rgba(255, 255, 255, 0.849);
+  line-height: 1.4;
 }
 
 .appwrite {
@@ -1635,4 +1635,8 @@ section p {
 
 .electron {
   color: #9FEAF9;
+}
+
+.go-to-section p {
+  line-height: 1.5;
 }
