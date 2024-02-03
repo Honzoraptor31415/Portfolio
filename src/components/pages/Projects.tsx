@@ -70,7 +70,7 @@ function Projects() {
                 }
               }} key={index} className="project" id={JSON.parse(value.title).en.replaceAll(" ", "-")}>
                 <div className="project-side">
-                  <a href={value.github}>
+                  <a target="_blank" href={value.github}>
                     <img src={value.img} className="rounded" />
                   </a>
                 </div>
@@ -89,17 +89,17 @@ function Projects() {
                   )}
                   <div className="project-links">
                     {value.web === "no" ? (
-                      <a href={value.github}>
+                      <a target="_blank" href={value.github}>
                         <img src="/github-icon.svg" />
                       </a>
                     ) : ("")}
 
                     {value.web === "yes" && value.link !== "no xD" ? (
                       <>
-                        <a href={value.github}>
+                        <a target="_blank" href={value.github}>
                           <img src="/github-icon.svg" />
                         </a>
-                        <a href={value.link}>
+                        <a target="_blank" href={value.link}>
                           <img src="/link-away.svg" />
                         </a>
                       </>
@@ -107,7 +107,7 @@ function Projects() {
                       <>
                         {value.web === "yes" ? (
                           <>
-                            <a href={value.github}>
+                            <a target="_blank" href={value.github}>
                               <img src="/github-icon.svg" />
                             </a>
                             <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
@@ -137,12 +137,12 @@ function Projects() {
                             setTimeout(() => {
                               setCopied(false)
                               document.getElementById(`btn-${index}`)?.blur()
-                            }, 1000);
+                            }, 1000)
                             clipboardWrite(`https://honzoraptor.vercel.app/projects#${JSON.parse(value.title).en.replaceAll(" ", "-")}`)
                           }} className="popover-link">
                             <img className="popover-icon" src="/copy-icon.svg" />
                             {copied ? (
-                              <span style={{ color: "lime" }}>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Zkopírováno!" : "Link copied!"}</span>
+                              <span className="success-text">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Zkopírováno!" : "Link copied!"}</span>
                             ) : (
                               <span>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Kopírovat odkaz" : "Copy link"}</span>
                             )}

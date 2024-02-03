@@ -1070,7 +1070,6 @@ main.projects>h1 {
 .project-links {
   display: flex;
   gap: 20px;
-  z-index: -1;
 }
 
 .project-links a {
@@ -1552,4 +1551,18 @@ main.admin {
 .popover .popover-icon {
   max-height: 22px;
   width: auto;
+}
+
+.success-text {
+  color: rgb(132, 255, 132);
+}
+
+@media (max-width: 1270px) {
+  .contact-socials-wrp {
+    justify-content: center;
+  }
+
+  #contact h2 {
+    text-align: center;
+  }
 }

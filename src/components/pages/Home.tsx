@@ -129,9 +129,9 @@ function Home() {
               </div>
               <h3>Python</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                <p>V tomhle bodě už mě programování začalo fakt bavit a chtěl jsem zkusit něco novýho. Moje první řádky Python kódu jsem napsal na webovým IDEčku na <a href="https://www.w3schools.com/python/trypython.asp?filename=demo_default">W3schools.com</a></p>
+                <p>V tomhle bodě už mě programování začalo fakt bavit a chtěl jsem zkusit něco novýho. Moje první řádky Python kódu jsem napsal na webovým IDEčku na <a target="_blank" href="https://www.w3schools.com/python/trypython.asp?filename=demo_default">W3schools.com</a></p>
               ) : (
-                <p>I started to be more interested in programming at this point and wanted to try something new. I wrote my first lines of Python code in a web-based IDE on <a href="https://www.w3schools.com/python/trypython.asp?filename=demo_default">W3schools.com</a></p>
+                <p>I started to be more interested in programming at this point and wanted to try something new. I wrote my first lines of Python code in a web-based IDE on <a target="_blank" href="https://www.w3schools.com/python/trypython.asp?filename=demo_default">W3schools.com</a></p>
               )}
             </section>
           </div>
@@ -181,9 +181,9 @@ function Home() {
               </div>
               <h3>Git</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                <p>Další krok k tomu být lepší vývojář je se naučit záchazet s Gitem a Githubem (nebo GigLabem/BitBucketem, ale Github je nejpoužívanější). Začal jsem se s ním učit zacházet kolem listopadu 2023, což je podle mě docela pozdě. Každopádně, <a href="https://github.com/Honzoraptor31415">tady je můj Github</a>.</p>
+                <p>Další krok k tomu být lepší vývojář je se naučit záchazet s Gitem a Githubem (nebo GigLabem/BitBucketem, ale Github je nejpoužívanější). Začal jsem se s ním učit zacházet kolem listopadu 2023, což je podle mě docela pozdě. Každopádně, <a target="_blank" href="https://github.com/Honzoraptor31415">tady je můj Github</a>.</p>
               ) : (
-                <p>Another step to being a good developer is to learn Git and Github (or GitLab/BitBucket, but Github is the most used one). I started learning Git just around November 2023, which is kinda late in my opinion. Anyways, <a href="https://github.com/Honzoraptor31415">here's my Github</a>.</p>
+                <p>Another step to being a good developer is to learn Git and Github (or GitLab/BitBucket, but Github is the most used one). I started learning Git just around November 2023, which is kinda late in my opinion. Anyways, <a target="_blank" href="https://github.com/Honzoraptor31415">here's my Github</a>.</p>
               )}
             </section>
           </div>
@@ -194,9 +194,9 @@ function Home() {
               </div>
               <h3>SvelteKit</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                <p>Je často označovanej jako nejpříjemnější Javascriptová library (to jako knihovna idk). A chápu proč: když píšeš cokoliv ve Sveltu, cítíš se, jako bys psal nějaký vyboostovaný HTML, který umí dělat podmínkový renderování, renderování arrayí (nevim jak na to do češtiny, j. č. je array) a psát proměnný přímo do markup kódu. Je daleko lěhčí v porovnání s Reactem, ale komunita kolem něj není bohužel moc velká. Zrovna teď pracuju na <a href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnectu</a> na kterej používám SvelteKit.</p>
+                <p>Je často označovanej jako nejpříjemnější Javascriptová library (to jako knihovna idk). A chápu proč: když píšeš cokoliv ve Sveltu, cítíš se, jako bys psal nějaký vyboostovaný HTML, který umí dělat podmínkový renderování, renderování arrayí (nevim jak na to do češtiny, j. č. je array) a psát proměnný přímo do markup kódu. Je daleko lěhčí v porovnání s Reactem, ale komunita kolem něj není bohužel moc velká. Zrovna teď pracuju na <a target="_blank" href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnectu</a> na kterej používám SvelteKit.</p>
               ) : (
-                <p>Is commonly refered to as the most loved Javascript library. And I understand why: when writing Svelte code, you feel like you're writing some boosted HTML, that can do conditional component rendering, rendering arrays and writing down variables directly into the markup code. It's way easier to learn compared to React, but it's community isn't as big. I'm currentely building <a href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnect</a> with SvelteKit.</p>
+                <p>Is commonly refered to as the most loved Javascript library. And I understand why: when writing Svelte code, you feel like you're writing some boosted HTML, that can do conditional component rendering, rendering arrays and writing down variables directly into the markup code. It's way easier to learn compared to React, but it's community isn't as big. I'm currentely building <a target="_blank" href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnect</a> with SvelteKit.</p>
               )}
             </section>
           </div>
