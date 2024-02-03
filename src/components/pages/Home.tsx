@@ -42,39 +42,39 @@ function Home() {
         <div className="header-side hidden">
           <div className="langs-tech">
             <a href="#html-css">
-              <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=html" alt="HTML" />
             </a>
             <a href="#html-css">
-              <img src="https://skillicons.dev/icons?i=css" alt="CSS" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=css" alt="CSS" />
             </a>
             <a href="#js">
-              <img src="https://skillicons.dev/icons?i=js" alt="js" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=js" alt="js" />
             </a>
             <a href="#ts">
-              <img src="https://skillicons.dev/icons?i=ts" alt="ts" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=ts" alt="ts" />
             </a>
             <a href="#react">
-              <img src="https://skillicons.dev/icons?i=react" alt="React" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=react" alt="React" />
             </a>
             <a href="#svelte">
-              <img src="https://skillicons.dev/icons?i=svelte" alt="Svelte" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="Svelte" />
             </a>
             <a href="#git">
-              <img src="https://skillicons.dev/icons?i=git" alt="Git" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=git" alt="Git" />
             </a>
             <a href="#py">
-              <img src="https://skillicons.dev/icons?i=py" alt="Python" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=py" alt="Python" />
             </a>
             <a href="#firebase">
-              <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=firebase" alt="Firebase" />
             </a>
             <a href="#supabase">
-              <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase" />
+              <img className="no-select" src="https://skillicons.dev/icons?i=supabase" alt="Supabase" />
             </a>
             {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-              <p className="langs-tech-above">Co používám <span className="pointer-finger">👆</span></p>
+              <p className="langs-tech-above">S čím umím <span className="pointer-finger">👆</span></p>
             ) : (
-              <p className="langs-tech-above">What I use <span className="pointer-finger">👆</span></p>
+              <p className="langs-tech-above">What I know <span className="pointer-finger">👆</span></p>
             )}
           </div>
         </div>
@@ -97,8 +97,8 @@ function Home() {
           <div id="html-css" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=html" alt="HTML icon" />
-                <img src="https://skillicons.dev/icons?i=css" alt="CSS icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=html" alt="HTML icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=css" alt="CSS icon" />
               </div>
               <h3>HTML, CSS</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -111,7 +111,7 @@ function Home() {
           <div id="js" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=js" alt="JS icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=js" alt="JS icon" />
               </div>
               <h3>JS</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -125,7 +125,7 @@ function Home() {
           <div id="py" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=py" alt="Python icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=py" alt="Python icon" />
               </div>
               <h3>Python</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -138,7 +138,7 @@ function Home() {
           <div id="firebase" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=firebase" alt="Firebase icon" />
               </div>
               <h3>Firebase</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -151,7 +151,7 @@ function Home() {
           <div id="ts" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=ts" alt="TS icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=ts" alt="TS icon" />
               </div>
               <h3>TS</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -164,7 +164,7 @@ function Home() {
           <div id="react" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=react" alt="React icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=react" alt="React icon" />
               </div>
               <h3>React</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -177,7 +177,7 @@ function Home() {
           <div id="git" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=git" alt="Git icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=git" alt="Git icon" />
               </div>
               <h3>Git</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -190,7 +190,7 @@ function Home() {
           <div id="svelte" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=svelte" alt="Svelte icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="Svelte icon" />
               </div>
               <h3>SvelteKit</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -203,7 +203,7 @@ function Home() {
           <div id="supabase" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=supabase" alt="Supabase icon" />
               </div>
               <h3>Supabase</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
@@ -214,12 +214,65 @@ function Home() {
             </section>
           </div>
         </section>
+        <section id="go-to-stack">
+          <h2 className="hidden">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Moje go-to technologie" : "My go-to technologies"}</h2>
+          <section id="webapps" className="go-to-section hidden">
+            <div className="go-to-top">
+              <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Pro webovky" : "For webapps"} </h3>
+              <div className="go-to-icons">
+                <img title="React" src="https://skillicons.dev/icons?i=react" />
+                <img title="Typescript" src="https://skillicons.dev/icons?i=ts" />
+                <img title="CSS" src="https://skillicons.dev/icons?i=css" />
+                <img title="Supabase" src="https://skillicons.dev/icons?i=supabase" />
+              </div>
+            </div>
+            {navigator.language === "cs" || navigator.language === "cs-CZ" ? (
+              <>
+                <p>Když programuju webový aplikace, vždycky se zamyslím nad dvěma věcma: Potřebuju backend? Jak komplikovaná tahle Webovka bude?</p>
+
+                <p>Obvykle když dělám komplikovanější věci, který mají složitej backend a hodně kódu, tak vyberu <span className="react">React</span> jako knihovnu, protože má hodně velkou komunitu, takže když se mi něco nezadaří, můžu se např. zeptat na Redditu/Discordu a někdo mi s tím poradí. Když je ta webovka ale míň komplikovaná a třeba ani nepotřebuje backend, použiju SvelteKit. Ani upřímně nevím proč používám Typescript, ale je to prostě takovej čistější zbůsob jak psát Javascript, tak asi proto. No a CSS je zatím jedinej stylovací jazyk, kterej znám, ale chtě, bych se ještě naučit <span className="sass">Sass</span>, abych byl trochu lepším developerem.</p>
+
+                <p>No a pro backend (BaaS) obvykle použiju Supabase, protože má úžasnou dokumentaci a je hodně jednoduchá na použití (zkoušel jsem React používat s Firebase, ale vůbec to nešlo - nešlo to ani se SvelteKitem, proto pomalu přecházím na Supabase, možná později i <span className="appwrite">Appwrite</span> ). Supabase používám i na tomhle webu btw.</p>
+
+              </>
+            ) : (
+              <>
+                <p>When programming webapps, I always think about two things: do I need a backend? How complicated will this website be?</p>
+
+                <p>Usually when making more complicated things, which have a huge backend and a lot of code I chose <span className="react">React</span> as a library, because it's community is really big, so whenever I'm stuck coding, I can just ask on Reddit/Discord and someone will help me. However if the webapp is less complicated and ex. doesn't requier a backend at all, I chose SvelteKit. Honestely, I don't even know why I use Typescript, but it's just a cleaner way to write Javascript, so that's propably why. Well and CSS is so far the only styling language that I know, but I want to learn <span className="sass">Sass</span> in the future, just so I'm a better dev.</p>
+
+                <p>And for the backend (Bass) I usually use Supabase, because it's docs are amazing and it's really easy to learn and use (I tried using React with Firebase, but it didn't work whatsoever - it didn't even work with Sveltekit, therefor I'm slowly switching to Supabase, maybe <span className="appwrite">Appwrite</span> later). Btw, I use Supabase on this website.</p>
+              </>
+            )}
+          </section>
+          <section id="pc-apps" className="go-to-section hidden">
+            <div className="go-to-top">
+              <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Pro programy na PC" : "For PC apps"} </h3>
+              <div className="go-to-icons">
+                <img title="Python" src="https://skillicons.dev/icons?i=py" />
+                <img title="Firebase" src="https://skillicons.dev/icons?i=firebase" />
+              </div>
+            </div>
+            {navigator.language === "cs" || navigator.language === "cs-CZ" ? (
+              <>
+                <p>Pro aplikace na PC a tím nemyslím jen klasické aplikace s GUI oknem, ale i různý scripty pro PC používám aktuálně hlavně Python. Aplikace i s backendem ale v pythonu nedělám, a kdybych dělal, vybral bych určitě <span className="firebase">Firebase</span> (já vím že je to BaaS, nech mě bejt pls), protože má pro python asi nejlepší dokumentaci.</p>
+
+                <p>V budoucnu mám v plánu zkusit <span className="electron">Electron JS</span> nebo <span className="react">React Native</span> (a to nejen pro desktop ale i Android), protože poskytujou daleko lepší přehled a zážitek pro vývojáře a jejich komunita je větší než ta od Pythonu.</p>
+              </>
+            ) : (
+              <>
+                <p>For PC apps (and with that I mean not only apps with GUI, but also PC scripts and stuff) I mainly use Python. I don't do backend for apps that use Python, because it's just not the right way to do it, but if I had to, I'd go with <span className="firebase">Firebase</span> (I know that it's a BaaS, pls leave me alone), because it's docs for Python are better than for others imo. </p>
+                <p>In the future I'm planning on making apps with <span className="electron">Electron JS</span> or <span className="react">React Native</span> (not only for desktop, but also Android), because those provide a better experience for the developer when coding and the community is bigger than for Python.</p>
+              </>
+            )}
+          </section>
+        </section>
         <section className="hidden" id="contact">
           <h2>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Kde mě najdeš" : "You can also find me here"}</h2>
           <div className="contact-socials-wrp">
             <a target="_blank" title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Nebo mi prostě napiš na instagramu" : "Or you can just DM me on instagram"} href="mailto:honzoraptor@gmail.com" className="socel-container hidden">
               <div className="socel-wrp">
-                <img src="gmail-icon.svg" alt="Gmail icon" />
+                <img className="no-select" src="gmail-icon.svg" alt="Gmail icon" />
                 <div className="socials-element">
                   <h3>Email</h3>
                   <p>Honzoraptor@gmail.com</p>
@@ -228,7 +281,7 @@ function Home() {
             </a>
             <a target="_blank" href="https://github.com/Honzoraptor31415" className="socel-container hidden">
               <div className="socel-wrp">
-                <img src="github-icon.svg" alt="Github icon" />
+                <img className="no-select" src="github-icon.svg" alt="Github icon" />
                 <div className="socials-element">
                   <h3>Github</h3>
                   <p title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tady najdeš vše, co jsem kdy naprogramoval (ne tak docela)" : "Here you'll find everything I've ever coded (sort of)"}>Honzoraptor31415</p>
@@ -237,7 +290,7 @@ function Home() {
             </a>
             <a target="_blank" href="https://www.instagram.com/honzoraptor/" className="socel-container hidden">
               <div className="socel-wrp">
-                <img src="instagram-icon.svg" alt="Instagram icon" />
+                <img className="no-select" src="instagram-icon.svg" alt="Instagram icon" />
                 <div className="socials-element">
                   <h3>Instagram</h3>
                   <p title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Tady jsem zrovna začal postovat" : "I just started posting here"}>@honzoraptor</p>
@@ -246,7 +299,7 @@ function Home() {
             </a>
             <a target="_blank" title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Už moc hry nedělám (udělal jsem zatím jenom jednu xD)" : "I don't really make games anymore (I made just one in my life xD)"} href="https://honzoraptor.itch.io/" className="socel-container hidden">
               <div className="socel-wrp">
-                <img src="itch-icon.svg" alt="Itch icon" />
+                <img className="no-select" src="itch-icon.svg" alt="Itch icon" />
                 <div className="socials-element">
                   <h3>Itch.io</h3>
                   <p>honzoraptor.itch.io</p>
