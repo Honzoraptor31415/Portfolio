@@ -194,9 +194,9 @@ function Home() {
               </div>
               <h3>SvelteKit</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                <p>Je často označovanej jako nejpříjemnější Javascriptová library (to jako knihovna idk). A chápu proč: když píšeš cokoliv ve Sveltu, cítíš se, jako bys psal nějaký vyboostovaný HTML, který umí dělat podmínkový renderování, renderování arrayí (nevim jak na to do češtiny, j. č. je array) a psát proměnný přímo do markup kódu. Je daleko lěhčí v porovnání s Reactem, ale komunita kolem něj není bohužel moc velká. Zrovna teď pracuju na <a target="_blank" href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnectu</a> na kterej používám SvelteKit.</p>
+                <p>Je často označovanej jako nejpříjemnější Javascriptová library (to jako knihovna idk). A chápu proč: když píšeš cokoliv ve Sveltu, cítíš se, jako bys psal nějaký vyboostovaný HTML, který umí dělat podmínkový renderování, renderování arrayí (nevim jak na to do češtiny, j. č. je array) a psát proměnný přímo do markup kódu. Je daleko lěhčí v porovnání s Reactem, ale komunita kolem něj není bohužel moc velká.</p>
               ) : (
-                <p>Is commonly refered to as the most loved Javascript library. And I understand why: when writing Svelte code, you feel like you're writing some boosted HTML, that can do conditional component rendering, rendering arrays and writing down variables directly into the markup code. It's way easier to learn compared to React, but it's community isn't as big. I'm currentely building <a target="_blank" href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnect</a> with SvelteKit.</p>
+                <p>Is commonly refered to as the most loved Javascript library. And I understand why: when writing Svelte code, you feel like you're writing some boosted HTML, that can do conditional component rendering, rendering arrays and writing down variables directly into the markup code. It's way easier to learn compared to React, but it's community isn't as big.</p>
               )}
             </section>
           </div>
@@ -220,10 +220,10 @@ function Home() {
             <div className="go-to-top">
               <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Pro webovky" : "For webapps"} </h3>
               <div className="go-to-icons">
-                <img title="React" src="https://skillicons.dev/icons?i=react" />
-                <img title="Typescript" src="https://skillicons.dev/icons?i=ts" />
-                <img title="CSS" src="https://skillicons.dev/icons?i=css" />
-                <img title="Supabase" src="https://skillicons.dev/icons?i=supabase" />
+                <img className="no-select" title="React" src="https://skillicons.dev/icons?i=react" />
+                <img className="no-select" title="Typescript" src="https://skillicons.dev/icons?i=ts" />
+                <img className="no-select" title="CSS" src="https://skillicons.dev/icons?i=css" />
+                <img className="no-select" title="Supabase" src="https://skillicons.dev/icons?i=supabase" />
               </div>
             </div>
             {navigator.language === "cs" || navigator.language === "cs-CZ" ? (
@@ -233,7 +233,6 @@ function Home() {
                 <p>Obvykle když dělám komplikovanější věci, který mají složitej backend a hodně kódu, tak vyberu <span className="react">React</span> jako knihovnu, protože má hodně velkou komunitu, takže když se mi něco nezadaří, můžu se např. zeptat na Redditu/Discordu a někdo mi s tím poradí. Když je ta webovka ale míň komplikovaná a třeba ani nepotřebuje backend, použiju SvelteKit. Ani upřímně nevím proč používám Typescript, ale je to prostě takovej čistější zbůsob jak psát Javascript, tak asi proto. No a CSS je zatím jedinej stylovací jazyk, kterej znám, ale chtě, bych se ještě naučit <span className="sass">Sass</span>, abych byl trochu lepším developerem.</p>
 
                 <p>No a pro backend (BaaS) obvykle použiju Supabase, protože má úžasnou dokumentaci a je hodně jednoduchá na použití (zkoušel jsem React používat s Firebase, ale vůbec to nešlo - nešlo to ani se SvelteKitem, proto pomalu přecházím na Supabase, možná později i <span className="appwrite">Appwrite</span> ). Supabase používám i na tomhle webu btw.</p>
-
               </>
             ) : (
               <>
@@ -249,8 +248,8 @@ function Home() {
             <div className="go-to-top">
               <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Pro programy na PC" : "For PC apps"} </h3>
               <div className="go-to-icons">
-                <img title="Python" src="https://skillicons.dev/icons?i=py" />
-                <img title="Firebase" src="https://skillicons.dev/icons?i=firebase" />
+                <img className="no-select" title="Python" src="https://skillicons.dev/icons?i=py" />
+                <img className="no-select" title="Firebase" src="https://skillicons.dev/icons?i=firebase" />
               </div>
             </div>
             {navigator.language === "cs" || navigator.language === "cs-CZ" ? (

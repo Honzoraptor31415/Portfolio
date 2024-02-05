@@ -322,8 +322,7 @@ body {
   .contact-socials-wrp {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 1.5em;
   }
 
   .socel-wrp {
@@ -396,7 +395,7 @@ body {
   }
 
   .go-to-section {
-    padding: 20px;
+    padding: 20px 20px;
     margin: 1px;
     border-radius: 18px;
     display: flex;
@@ -652,7 +651,6 @@ body {
 
   .contact-socials-wrp {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 15px;
   }
@@ -819,7 +817,7 @@ body {
 
   .go-to-section {
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px 8px;
     margin: 1px;
     border-radius: 18px;
     background: var(--secBG);
@@ -828,7 +826,10 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    padding-inline: 5px;
+  }
+
+  #go-to-stack {
+    padding-inline: 7px;
   }
 
   .go-to-section h3 {
@@ -1527,6 +1528,7 @@ main.admin {
   background: transparent;
   backdrop-filter: blur(5px);
   border: 1px var(--border-main) solid;
+  background: rgba(var(--mainBGNum), 0.8);
   border-radius: 18px;
   overflow: hidden;
   transform: translate(-90%, -17%);
@@ -1557,9 +1559,10 @@ main.admin {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  min-width: 120px;
+  min-width: 140px;
   align-items: center;
   cursor: pointer;
+  box-sizing: content-box;
 }
 
 .popover .popover-link:hover {
@@ -1576,10 +1579,6 @@ main.admin {
 }
 
 @media (max-width: 1270px) {
-  .contact-socials-wrp {
-    justify-content: center;
-  }
-
   #contact h2 {
     text-align: center;
   }
@@ -1588,7 +1587,6 @@ main.admin {
 .go-to-section {
   margin-block: 20px;
   transition: .4s;
-  padding-inline: 20px;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.599);
   border: 1px var(--border-main) solid;
 }
@@ -1639,4 +1637,8 @@ section p {
 
 .go-to-section p {
   line-height: 1.5;
+}
+
+.contact-socials-wrp {
+  justify-content: center;
 }
