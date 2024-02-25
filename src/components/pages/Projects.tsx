@@ -68,7 +68,7 @@ function Projects() {
                 if (location.hash !== "") {
                   document.getElementById(location.hash.slice(1))?.scrollIntoView()
                 }
-              }} key={index} className="project" id={JSON.parse(value.title).en.replaceAll(" ", "-")}>
+              }} key={index} className="project" id={value.titleEn.replaceAll(" ", "-")}>
                 <div className="project-side">
                   <a target="_blank" href={value.github}>
                     <img src={value.img} className="rounded" />
@@ -76,16 +76,16 @@ function Projects() {
                 </div>
                 <div className="project-side">
                   <div className="project-top">
-                    <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? JSON.parse(value.title).cz : JSON.parse(value.title).en}</h3>
+                    <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? value.titleCz : value.titleEn}</h3>
                     {/* value.date.split(".") = ex. ["10", "12", " 2023"] 
 
                     value.date.split(".")[2].slice(1) = ex "2023" (cleans the whitespace for the year) */}
                     <p className="date">{value.date.split(".")[0].length < 2 ? `0${value.date.split(".")[0]}` : value.date.split(".")[0]}.{value.date.split(".")[1].length < 2 ? `0${value.date.split(".")[1]}` : value.date.split(".")[1]}. {value.date.split(".")[2].slice(1)}</p>
                   </div>
                   {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                    <p>{JSON.parse(value.text).cz}</p>
+                    <p>{value.textCz}</p>
                   ) : (
-                    <p>{JSON.parse(value.text).en}</p>
+                    <p>{value.textEn}</p>
                   )}
                   <div className="project-links">
                     {value.web === "no" ? (
@@ -138,7 +138,7 @@ function Projects() {
                               setCopied(false)
                               document.getElementById(`btn-${index}`)?.blur()
                             }, 1000)
-                            clipboardWrite(`https://honzoraptor.vercel.app/projects#${JSON.parse(value.title).en.replaceAll(" ", "-")}`)
+                            clipboardWrite(`https://honzoraptor.vercel.app/projects#${value.titleEn.replaceAll(" ", "-")}`)
                           }} className="popover-link">
                             <img className="popover-icon" src="/copy-icon.svg" />
                             {copied ? (

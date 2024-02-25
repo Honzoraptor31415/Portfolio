@@ -56,12 +56,14 @@ function New() {
     if (user) {
       const res = await supabase.from("Projects").insert(
         {
-          title: `{"cz":"${CZtitle}","en":"${ENTitle}"}`,
-          date: date ? date : `${new Date().getDay()}.${new Date().getMonth() + 1}.${new Date().getFullYear()}`,
+          titleCz: CZtitle,
+          titleEn: ENTitle,
+          date: date ? date : `${new Date().getDate().toString().length < 2 ? `0${new Date().getDate()}` : new Date().getDate()}.${(new Date().getMonth() + 1).toString().length < 2 ? `0${new Date().getMonth()}` : new Date().getMonth()}. ${new Date().getFullYear()}`,
           img: imgUrl,
           github: githubLink,
           link: url ? url : "no xD",
-          text: `{"cz":"${CZText}","en":"${ENText}"}`,
+          textCz: CZText,
+          textEn: ENText,
           tags: tags,
           web: isWeb
         }).select("*").single()
