@@ -41,7 +41,9 @@ function Nav() {
             <a href="/projects">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Projekty" : "Projects"}</a>
           </div>
           {user ? <>
-            <button className="signout-btn" onClick={signOut}>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odhlásit" : "Sign out"}</button>
+            <button className="signout-btn" onClick={signOut}>
+              <img src="signout-icon.svg" />
+            </button>
           </> : ""}
           <a href="https://github.com/Honzoraptor31415">
             <img className="no-select" src="/github-icon.svg" alt="Github icon" />
@@ -62,13 +64,14 @@ function Nav() {
         </nav>
         <nav style={{ right: `${navState}%` }} className="expanded">
           <div className="expanded-top">
-            <button onClick={() => { setNavState(-100) }}>
-              <div className="menu-line cross-line"></div>
-              <div className="menu-line cross-line"></div>
-            </button>
             {user ? <>
-              <button className="signout-btn" onClick={signOut}>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odhlásit" : "Sign out"}</button>
+              <button className="signout-btn" onClick={signOut}>
+                <img src="signout-icon.svg" />
+              </button>
             </> : ""}
+            <button onClick={() => { setNavState(-100) }}>
+              <img src="cross-icon.svg" className="no-select" />
+            </button>
           </div>
           <div className="menu">
             <a onClick={() => { setNavState(-100) }} href="/#about">{navigator.language === "cs-CZ" ? "O mně" : "About"}</a>

@@ -417,25 +417,17 @@ body {
     max-width: 70%;
   }
 
-  .signout-btn {
-    padding: 10px 20px;
-    border-radius: 14px;
-    cursor: pointer;
-    background: #1a1a1abc;
-    backdrop-filter: blur(4px);
-    border: 1px #3c3c3c solid;
-    color: white;
-    font-size: 1rem;
-    transition: .3s;
-  }
-
-  .signout-btn:hover {
-    border-color: rgba(255, 255, 255, 0.829);
-  }
-
   .nav-side {
     display: flex;
     align-items: center;
+  }
+
+  .signout-btn img {
+    filter: invert(30%);
+  }
+
+  .signout-btn:hover img {
+    filter: invert(0%);
   }
 }
 
@@ -465,7 +457,6 @@ body {
   }
 
   nav:not(.expanded) {
-
     width: 100%;
     padding-block: 20px;
     position: fixed;
@@ -479,14 +470,14 @@ body {
   }
 
   .menu-line {
-    height: 5px;
-    width: 40px;
+    height: 8px;
+    width: 46px;
     background: white;
-    border-radius: 4px;
+    border-radius: 2px;
   }
 
   .menu-line:nth-child(2) {
-    margin-block: 5px;
+    margin-block: 3px;
   }
 
   .expanded {
@@ -509,6 +500,10 @@ body {
     top: 0;
   }
 
+  .expanded-top:not(.expanded-top:has(.signout-btn)) {
+    justify-content: right;
+  }
+
   .expanded-top button {
     transition: .3s;
   }
@@ -516,14 +511,6 @@ body {
   nav button:hover,
   .expanded-top button:not(.signout-btn):hover {
     transform: scale(1.1);
-  }
-
-  .cross-line:nth-child(1) {
-    transform: rotate(45deg) translateX(8px);
-  }
-
-  .cross-line:nth-child(2) {
-    transform: rotate(-45deg) translateX(7px);
   }
 
   .menu {
@@ -872,20 +859,8 @@ body {
     max-width: 95%;
   }
 
-  .signout-btn {
-    padding: 10px 20px;
-    border-radius: 14px;
-    cursor: pointer;
-    background: #1a1a1abc;
-    backdrop-filter: blur(4px);
-    border: 1px #3c3c3c solid;
-    color: white;
-    font-size: 1rem;
-    transition: .3s;
-  }
-
-  .signout-btn:hover {
-    border-color: rgba(255, 255, 255, 0.829);
+  .signout-btn:hover img:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -1691,4 +1666,17 @@ section p {
   background: rgba(111, 0, 0, 0.39);
   padding: 7px;
   width: 100%;
+}
+
+.signout-btn {
+  display: grid;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.signout-btn img {
+  height: 34px;
+  width: auto;
+  transition: .3s;
 }
