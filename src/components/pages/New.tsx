@@ -58,7 +58,7 @@ function New() {
         {
           titleCz: CZtitle,
           titleEn: ENTitle,
-          date: date ? date : `${new Date().getDate().toString().length < 2 ? `0${new Date().getDate()}` : new Date().getDate()}.${(new Date().getMonth() + 1).toString().length < 2 ? `0${new Date().getMonth()}` : new Date().getMonth()}. ${new Date().getFullYear()}`,
+          date: date ? date : `${new Date().getDate()}.${new Date().getMonth() + 1}. ${new Date().getFullYear()}`,
           img: imgUrl,
           github: githubLink,
           link: url ? url : "no xD",
