@@ -3,7 +3,15 @@ import BlurryBackground from "../BlurryBackground";
 import { supabase } from "../../supabaseClient";
 
 function New() {
+  async function getUser() {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) {
+      location.href = "/"
+    }
+  }
+
   useEffect(() => {
+    getUser()
     if (navigator.language === "cs" || navigator.language === "cs-CZ") {
       document.title = "Novej projekt"
     } else {

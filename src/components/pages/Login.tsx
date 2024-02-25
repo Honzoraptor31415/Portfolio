@@ -13,6 +13,7 @@ function Login() {
   }, [])
   const [emailText, setEmailText] = useState("")
   const [pwdText, setPwdText] = useState("")
+  const [err, setErr] = useState({ cz: "", en: "" })
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmailText(e.target.value);
@@ -29,6 +30,21 @@ function Login() {
     })
 
     console.log(data, error)
+
+    if (!error) {
+      location.href = "/new"
+    } else {
+      setErrElem("Údaje nesedí", "User cridentials don't match")
+    }
+  }
+
+  function setErrElem(cz: string, en: string) {
+    setEmailText("")
+    setPwdText("")
+    setErr({ cz: cz, en: en })
+    setTimeout(() => {
+      setErr({ cz: "", en: "" })
+    }, 2000)
   }
 
   async function getUser() {
@@ -45,14 +61,20 @@ function Login() {
   return (
     <header className="login-header">
       <BlurryBackground />
-      <div className="login-form" id="form">
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        signInWithEmail()
+      }} className="login-form" id="form">
         <h3>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Přihlásit se" : "Login"}</h3>
-        <input type="email" id="email" placeholder="Email" onChange={handleEmailChange} value={emailText} />
-        <input type="password" id="password" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Heslo" : "Password"} onChange={handlePwdChange} value={pwdText} />
+        {err.en !== "" ?
+          <p className="login-error">{navigator.language === "cs" || navigator.language === "cs-CZ" ? err.cz : err.en}</p>
+          : ""}
+        <input required type="email" id="email" placeholder="Email" onChange={handleEmailChange} value={emailText} />
+        <input required type="password" id="password" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Heslo" : "Password"} onChange={handlePwdChange} value={pwdText} />
         <div className="form-btn-border">
-          <button onClick={() => { signInWithEmail() }} id="submit">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Přihlásit" : "Login"}</button>
+          <input type="submit" id="submit" value={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Přihlásit" : "Login"} />
         </div>
-      </div>
+      </form>
     </header>
   )
 }

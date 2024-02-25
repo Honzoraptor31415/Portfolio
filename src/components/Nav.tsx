@@ -1,7 +1,29 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { supabase } from "../supabaseClient"
 
 function Nav() {
   const [navState, setNavState] = useState(-100)
+  const [user, setUser] = useState<any>()
+
+  async function getUser() {
+    const { data: { user } } = await supabase.auth.getUser()
+    setUser(user)
+  }
+
+  async function signOut() {
+    const { error } = await supabase.auth.signOut()
+    console.log(error)
+    setUser(null)
+    if (!error) {
+      location.href = location.href
+    }
+  }
+
+  useEffect(() => {
+    getUser()
+  }, [])
+
+
   return (
     <>
       <nav id="desktop">
@@ -18,6 +40,9 @@ function Nav() {
           <div className="link-wrp">
             <a href="/projects">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Projekty" : "Projects"}</a>
           </div>
+          {user ? <>
+            <button className="signout-btn" onClick={signOut}>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odhlásit" : "Sign out"}</button>
+          </> : ""}
           <a href="https://github.com/Honzoraptor31415">
             <img className="no-select" src="/github-icon.svg" alt="Github icon" />
           </a>
@@ -41,6 +66,9 @@ function Nav() {
               <div className="menu-line cross-line"></div>
               <div className="menu-line cross-line"></div>
             </button>
+            {user ? <>
+              <button className="signout-btn" onClick={signOut}>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odhlásit" : "Sign out"}</button>
+            </> : ""}
           </div>
           <div className="menu">
             <a onClick={() => { setNavState(-100) }} href="/#about">{navigator.language === "cs-CZ" ? "O mně" : "About"}</a>

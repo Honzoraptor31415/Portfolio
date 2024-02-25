@@ -365,7 +365,6 @@ body {
   }
 
   footer {
-
     padding: 60px 80px;
     background: rgb(20, 20, 20);
     border-top: 1px rgba(255, 255, 255, 0.154) solid;
@@ -380,7 +379,6 @@ body {
 
   .project {
     width: 900px;
-
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -413,6 +411,31 @@ body {
 
   .go-to-icons img {
     width: auto;
+  }
+
+  .login-form {
+    max-width: 70%;
+  }
+
+  .signout-btn {
+    padding: 10px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    background: #1a1a1abc;
+    backdrop-filter: blur(4px);
+    border: 1px #3c3c3c solid;
+    color: white;
+    font-size: 1rem;
+    transition: .3s;
+  }
+
+  .signout-btn:hover {
+    border-color: rgba(255, 255, 255, 0.829);
+  }
+
+  .nav-side {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -479,20 +502,19 @@ body {
 
   .expanded-top {
     width: 100%;
+    padding: 20px 30px;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     position: absolute;
     top: 0;
   }
 
   .expanded-top button {
-    margin-right: 30px;
-    margin-top: 30px;
     transition: .3s;
   }
 
   nav button:hover,
-  .expanded-top button:hover {
+  .expanded-top button:not(.signout-btn):hover {
     transform: scale(1.1);
   }
 
@@ -513,7 +535,7 @@ body {
   }
 
   .expanded a {
-    color: rgba(255, 255, 255, 0.675);
+    color: rgba(255, 255, 255, 0.832);
     text-decoration: none;
     transition: .3s;
     margin-inline: auto;
@@ -844,6 +866,26 @@ body {
 
   .go-to-icons img {
     width: auto;
+  }
+
+  .login-form {
+    max-width: 95%;
+  }
+
+  .signout-btn {
+    padding: 10px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    background: #1a1a1abc;
+    backdrop-filter: blur(4px);
+    border: 1px #3c3c3c solid;
+    color: white;
+    font-size: 1rem;
+    transition: .3s;
+  }
+
+  .signout-btn:hover {
+    border-color: rgba(255, 255, 255, 0.829);
   }
 }
 
@@ -1298,10 +1340,9 @@ header.error {
   border: 1px var(--border-main) solid;
   border-radius: 18px;
   gap: 30px;
-  max-width: 70%;
 }
 
-.login-form input {
+.login-form input:not(input[type=submit]) {
   border-radius: 14px;
   background: transparent;
   backdrop-filter: blur(20px);
@@ -1311,7 +1352,7 @@ header.error {
 }
 
 .login-form input,
-.login-form button {
+.login-form input[type=submit] {
   color: white;
   font-size: 1rem;
   border: 1px var(--border-main) solid;
@@ -1325,7 +1366,7 @@ header.error {
   transition: .3s;
 }
 
-.login-form button {
+.login-form input[type=submit] {
   background: rgb(26, 26, 26);
   border-radius: inherit;
   padding: 10px 20px;
@@ -1641,4 +1682,13 @@ section p {
 
 .contact-socials-wrp {
   justify-content: center;
+}
+
+.login-error {
+  color: red;
+  font-style: italic;
+  border-radius: 9px;
+  background: rgba(111, 0, 0, 0.39);
+  padding: 7px;
+  width: 100%;
 }
