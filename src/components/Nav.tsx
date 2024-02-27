@@ -42,7 +42,7 @@ function Nav() {
           </div>
           {user ? <>
             <button className="signout-btn" onClick={signOut}>
-              <img src="signout-icon.svg" />
+              <img src="signout-icon.svg" className="no-select" />
             </button>
           </> : ""}
           <a href="https://github.com/Honzoraptor31415">
@@ -66,7 +66,7 @@ function Nav() {
           <div className="expanded-top">
             {user ? <>
               <button className="signout-btn" onClick={signOut}>
-                <img src="signout-icon.svg" />
+                <img src="signout-icon.svg" className="no-select" />
               </button>
             </> : ""}
             <button onClick={() => { setNavState(-100) }}>
