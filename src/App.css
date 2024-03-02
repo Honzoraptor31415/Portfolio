@@ -922,6 +922,11 @@ body {
   background: #249361;
 }
 
+.langs-tech a[href="#appwrite"]:hover {
+  box-shadow: 0 6px 6px #F02E65;
+  background: #F02E65;
+}
+
 p a {
   text-decoration: none;
   color: var(--accent2);
@@ -1091,6 +1096,10 @@ main.projects>h1 {
   color: #3ECF8E;
 }
 
+.appwrite-tag {
+  color: #F02E65;
+}
+
 .tags-wrp>p {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.671);
@@ -1188,6 +1197,10 @@ main.projects>h1 {
 
 .langs-sec-border#supabase {
   background: radial-gradient(#249361, var(--mainBG));
+}
+
+.langs-sec-border#appwrite {
+  background: radial-gradient(#F02E65, var(--mainBG));
 }
 
 main>* {
