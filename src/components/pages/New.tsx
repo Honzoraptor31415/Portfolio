@@ -27,7 +27,7 @@ function New() {
   const [CZText, setCZText] = useState("")
   const [ENText, setENText] = useState("")
   const [tags, setTags] = useState("")
-  const [isWeb, setIsWeb] = useState("")
+  const [isWeb, setIsWeb] = useState("yes")
 
   const handleCZTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCZTitle(e.target.value)
