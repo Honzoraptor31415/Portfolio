@@ -71,6 +71,9 @@ function Home() {
             <a href="#supabase">
               <img className="no-select" src="https://skillicons.dev/icons?i=supabase" alt="Supabase" />
             </a>
+            <a href="#appwrite">
+              <img className="no-select" src="https://skillicons.dev/icons?i=appwrite" alt="Appwrite" />
+            </a>
             {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
               <p className="langs-tech-above">S čím umím <span className="pointer-finger">👆</span></p>
             ) : (
@@ -213,6 +216,23 @@ function Home() {
               )}
             </section>
           </div>
+
+
+          <div id="appwrite" className="langs-sec-border hidden">
+            <section className="langs-section">
+              <div className="langs-icons">
+                <img className="no-select" src="https://skillicons.dev/icons?i=appwrite" alt="Appwrite icon" />
+              </div>
+              <h3>Appwrite</h3>
+              {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
+                <p>Protože umět s dvěma BaaSama (basama lol) není dost, začátkem března jsem se naučil zacházet i s Appwritem. Bylo to taky protože mi SvelteKit nefungoval s Firebase (<a href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnect</a> je dobrým příkladem). No a když jsem SvelteKit zkusil s Appwritem, bylo to úžasný, jednoduchý a hlavně bez glitchů.</p>
+              ) : (
+                <p>Because <span className="sarcasm">mastering</span> knowing how to work with two BaaSes is not enough, in the beginning of March 2024 I learned to work with Appwrite. I also did it, because SvelteKit didn't work as good as it should with Firebase (<a href="https://github.com/Honzoraptor31415/CodeConnect">CodeConnect</a> is a good example). And when I tried SvelteKit with Appwrite, it was wonderful, easy and mainly without any glitches.</p>
+              )}
+            </section>
+          </div>
+
+
         </section>
         <section id="go-to-stack">
           <h2 className="hidden">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Moje go-to technologie" : "My go-to technologies"}</h2>
