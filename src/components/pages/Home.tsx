@@ -56,8 +56,8 @@ function Home() {
             <a href="#react">
               <img className="no-select" src="https://skillicons.dev/icons?i=react" alt="React" />
             </a>
-            <a href="#svelte">
-              <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="Svelte" />
+            <a href="#sveltekit">
+              <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="SvelteKit" />
             </a>
             <a href="#git">
               <img className="no-select" src="https://skillicons.dev/icons?i=git" alt="Git" />
@@ -190,16 +190,16 @@ function Home() {
               )}
             </section>
           </div>
-          <div id="svelte" className="langs-sec-border hidden">
+          <div id="sveltekit" className="langs-sec-border hidden">
             <section className="langs-section">
               <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="Svelte icon" />
+                <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="SvelteKit icon" />
               </div>
               <h3>SvelteKit</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                <p>Je často označovanej jako nejpříjemnější Javascriptová library (to jako knihovna idk). A chápu proč: když píšeš cokoliv ve Sveltu, cítíš se, jako bys psal nějaký vyboostovaný HTML, který umí dělat podmínkový renderování, renderování arrayí (nevim jak na to do češtiny, j. č. je array) a psát proměnný přímo do markup kódu. Je daleko lěhčí v porovnání s Reactem, ale komunita kolem něj není bohužel moc velká.</p>
+                <p>Je často označovanej jako nejpříjemnější Javascriptová library (to jako knihovna idk). A chápu proč: když píšeš cokoliv ve Sveltu/SvelteKitu, cítíš se, jako bys psal nějaký vyboostovaný HTML, který umí dělat podmínkový renderování, renderování arrayí (nevim jak na to do češtiny, j. č. je array) a psát proměnný přímo do markup kódu. Je daleko lěhčí v porovnání s Reactem, ale komunita kolem něj není bohužel moc velká.</p>
               ) : (
-                <p>Is commonly refered to as the most loved Javascript library. And I understand why: when writing Svelte code, you feel like you're writing some boosted HTML, that can do conditional component rendering, rendering arrays and writing down variables directly into the markup code. It's way easier to learn compared to React, but it's community isn't as big.</p>
+                <p>Is commonly refered to as the most loved Javascript library. And I understand why: when writing Svelte/SvelteKit code, you feel like you're writing some boosted HTML, that can do conditional component rendering, rendering arrays and writing down variables directly into the markup code. It's way easier to learn compared to React, but it's community isn't as big.</p>
               )}
             </section>
           </div>
@@ -260,7 +260,7 @@ function Home() {
 
                 <p>Usually when making more complicated things, which have a huge backend and a lot of code I chose <span className="react">React</span> as a library, because it's community is really big, so whenever I'm stuck coding, I can just ask on Reddit/Discord and someone will help me. However if the webapp is less complicated and ex. doesn't requier a backend at all, I chose SvelteKit. Honestely, I don't even know why I use Typescript, but it's just a cleaner way to write Javascript, so that's propably why. Well and CSS is so far the only styling language that I know, but I want to learn <span className="sass">Sass</span> in the future, just so I'm a better dev.</p>
 
-                <p>And for the backend (Bass) I usually use Supabase, because it's docs are amazing and it's really easy to learn and use (I tried using React with Firebase, but it didn't work whatsoever - it didn't even work with Sveltekit, therefor I'm slowly switching to Supabase, maybe <span className="appwrite">Appwrite</span> later). Btw, I use Supabase on this website.</p>
+                <p>And for the backend (Bass) I usually use Supabase, because it's docs are amazing and it's really easy to learn and use (I tried using React with Firebase, but it didn't work whatsoever - it didn't even work with SvelteKit, therefor I'm slowly switching to Supabase, maybe <span className="appwrite">Appwrite</span> later). Btw, I use Supabase on this website.</p>
               </>
             )}
           </section>

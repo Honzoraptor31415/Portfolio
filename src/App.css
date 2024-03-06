@@ -897,7 +897,7 @@ body {
   background: #00D8FF;
 }
 
-.langs-tech a[href="#svelte"]:hover {
+.langs-tech a[href="#sveltekit"]:hover {
   box-shadow: 0 6px 6px #FF3E00;
   background: #FF3E00;
 }
@@ -1060,7 +1060,7 @@ main.projects>h1 {
   color: #F0DB4F;
 }
 
-.svelte-tag {
+.sveltekit-tag {
   color: #FF3E00;
 }
 
@@ -1179,7 +1179,7 @@ main.projects>h1 {
   background: radial-gradient(#00D8FF, var(--mainBG));
 }
 
-.langs-sec-border#svelte {
+.langs-sec-border#sveltekit {
   background: radial-gradient(#FF3E00, var(--mainBG));
 }
 
