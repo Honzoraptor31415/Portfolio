@@ -140,12 +140,7 @@ function Projects() {
                             }, 1000)
                             clipboardWrite(`https://honzoraptor.vercel.app/projects#${value.titleEn.replaceAll(" ", "-")}`)
                           }} className="popover-link">
-                            <img className="popover-icon" src="/copy-icon.svg" />
-                            {copied ? (
-                              <span className="success-text">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Zkopírováno!" : "Link copied!"}</span>
-                            ) : (
-                              <span>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Kopírovat odkaz" : "Copy link"}</span>
-                            )}
+                            {copied ? navigator.language === "cs" || navigator.language === "cs-CZ" ? "Zkopírováno!" : "Link copied!" : navigator.language === "cs" || navigator.language === "cs-CZ" ? "Kopírovat odkaz" : "Copy link"}
                           </a>
                         </div>
                       </button>

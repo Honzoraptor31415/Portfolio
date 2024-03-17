@@ -1542,7 +1542,8 @@ main.admin {
   display: none;
 }
 
-.three-dots-btn:focus .popover {
+.three-dots-btn:focus .popover,
+.three-dots-btn:focus-within .popover {
   display: block;
 }
 
@@ -1559,9 +1560,8 @@ main.admin {
   border: 1px var(--border-main) solid;
   background: rgba(var(--mainBGNum), 0.8);
   border-radius: 18px;
-  overflow: hidden;
-  transform: translate(-90%, -17%);
   cursor: default;
+  overflow: hidden;
   animation: show-popup .15s forwards;
 }
 
@@ -1585,11 +1585,7 @@ main.admin {
   border: none;
   background: transparent;
   font-size: .9rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  min-width: 140px;
-  align-items: center;
+  width: max-content;
   cursor: pointer;
   box-sizing: content-box;
 }
