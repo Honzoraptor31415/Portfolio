@@ -862,6 +862,17 @@ body {
   .signout-btn:hover img:hover {
     transform: scale(1.1);
   }
+
+  .nav-side {
+    display: grid;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-menu-button {
+    height: fit-content;
+  }
 }
 
 .logo-text:hover {
@@ -1688,4 +1699,8 @@ section p {
   height: 34px;
   width: auto;
   transition: .3s;
+}
+
+.grid-wrp {
+  display: grid;
 }

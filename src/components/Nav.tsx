@@ -52,15 +52,17 @@ function Nav() {
       </nav>
       <div id="mobile">
         <nav>
-          <a href="https://github.com/Honzoraptor31415">
+          <a href="https://github.com/Honzoraptor31415" className="nav-side">
             <img className="no-select" src="/github-icon.svg" alt="Github icon" />
           </a>
           <a href="/" className="logo-text" data-title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}</a>
-          <button onClick={() => { setNavState(0) }}>
-            <div className="menu-line"></div>
-            <div className="menu-line"></div>
-            <div className="menu-line"></div>
-          </button>
+          <div className="grid-wrp nav-side">
+            <button className="nav-menu-button" onClick={() => { setNavState(0) }}>
+              <div className="menu-line"></div>
+              <div className="menu-line"></div>
+              <div className="menu-line"></div>
+            </button>
+          </div>
         </nav>
         <nav style={{ right: `${navState}%` }} className="expanded">
           <div className="expanded-top">
