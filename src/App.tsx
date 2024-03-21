@@ -16,6 +16,9 @@ function App() {
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
 
+  const navLocations = ["", "projects", "admin"]
+  const pathname = location.pathname.replaceAll("/", "")
+
   onload = () => {
     console.log(`%c
 
@@ -36,7 +39,7 @@ function App() {
   }
   return (
     <>
-      {window.location.pathname === "/" || window.location.pathname === "/projects" || window.location.pathname === "/projects/" || window.location.pathname === "/admin" ? (<Nav />) : ""}
+      {navLocations.includes(pathname) && (<Nav />)}
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -47,7 +50,7 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
-      {window.location.pathname === "/" || window.location.pathname === "/projects" || window.location.pathname === "/projects/" || window.location.pathname === "/admin" ? (<Footer />) : ""}
+      {navLocations.includes(pathname) && (<Footer />)}
     </>
   )
 }

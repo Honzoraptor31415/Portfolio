@@ -66,9 +66,8 @@ function Login() {
         signInWithEmail()
       }} className="login-form" id="form">
         <h3>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Přihlásit se" : "Login"}</h3>
-        {err.en !== "" ?
-          <p className="login-error">{navigator.language === "cs" || navigator.language === "cs-CZ" ? err.cz : err.en}</p>
-          : ""}
+        {err.en !== "" &&
+          <p className="login-error">{navigator.language === "cs" || navigator.language === "cs-CZ" ? err.cz : err.en}</p>}
         <input required type="email" id="email" placeholder="Email" onChange={handleEmailChange} value={emailText} />
         <input required type="password" id="password" placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Heslo" : "Password"} onChange={handlePwdChange} value={pwdText} />
         <div className="form-btn-border">
