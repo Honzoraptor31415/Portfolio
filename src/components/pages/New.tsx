@@ -135,7 +135,7 @@ function New() {
           <input placeholder={navigator.language === "cs" || navigator.language === "cs-CZ" ? "Tagy" : "Tags"} required type="text" id="tags" onChange={handleTagsChange} value={tags} />
 
           <div className="submit-wrp">
-            <button onClick={handleSubmit} id="submit">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odeslat" : "Submit"}</button>
+            <button onClick={handleSubmit} className="outline-btn" id="submit">{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Odeslat" : "Submit"}</button>
           </div>
         </div>
       </header>

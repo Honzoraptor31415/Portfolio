@@ -23,7 +23,6 @@ function Nav() {
     getUser()
   }, [])
 
-
   return (
     <>
       <nav id="desktop">
@@ -40,14 +39,12 @@ function Nav() {
           <div className="link-wrp">
             <a href="/projects">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Projekty" : "Projects"}</a>
           </div>
-          {user && <>
-            <button className="signout-btn" onClick={signOut}>
-              <img src="signout-icon.svg" className="no-select" />
-            </button>
-          </>}
           <a href="https://github.com/Honzoraptor31415">
             <img className="no-select" src="/github-icon.svg" alt="Github icon" />
           </a>
+          {user && <>
+            <button className="outline-btn" onClick={signOut}>Sign out</button>
+          </>}
         </div>
       </nav>
       <div id="mobile">
@@ -67,8 +64,8 @@ function Nav() {
         <nav style={{ right: `${navState}%` }} className="expanded">
           <div className="expanded-top">
             {user && <>
-              <button className="signout-btn" onClick={signOut}>
-                <img src="signout-icon.svg" className="no-select" />
+              <button className="signout-btn flex-center-verticall" onClick={signOut}>
+                <img src="signout-icon.svg" className="no-select signout-icon" />
               </button>
             </>}
             <button onClick={() => { setNavState(-100) }}>
