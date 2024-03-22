@@ -1095,6 +1095,10 @@ body {
   .popover .popover-link:active {
     background: rgba(255, 255, 255, 0.175);
   }
+
+  * {
+    cursor: default !important;
+  }
 }
 
 p a {
