@@ -89,17 +89,17 @@ function Projects() {
                   )}
                   <div className="project-links">
                     {value.web === "no" ? (
-                      <a target="_blank" href={value.github}>
+                      <a target="_blank" href={value.github} className="before-bg-anim">
                         <img src="/github-icon.svg" />
                       </a>
                     ) : ("")}
 
                     {value.web === "yes" && value.link !== "no xD" ? (
                       <>
-                        <a target="_blank" href={value.github}>
+                        <a target="_blank" href={value.github} className="before-bg-anim">
                           <img src="/github-icon.svg" />
                         </a>
-                        <a target="_blank" href={value.link}>
+                        <a target="_blank" href={value.link} className="before-bg-anim">
                           <img src="/link-away.svg" />
                         </a>
                       </>
@@ -107,7 +107,7 @@ function Projects() {
                       <>
                         {value.web === "yes" ? (
                           <>
-                            <a target="_blank" href={value.github}>
+                            <a target="_blank" href={value.github} className="before-bg-anim">
                               <img src="/github-icon.svg" />
                             </a>
                             <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
@@ -129,7 +129,7 @@ function Projects() {
                       </div>
                     </div>
                     <div className="popover-wrp">
-                      <button id={`btn-${index}`} className="three-dots-btn popover-btn">
+                      <button id={`btn-${index}`} className="three-dots-btn popover-btn before-bg-anim">
                         <img className="three-dots-vertical" src="/three-dots-vertical-icon.svg" alt="" />
                         <div id={`popover-${index}`} className="popover">
                           <a onClick={() => {
@@ -140,7 +140,9 @@ function Projects() {
                             }, 1000)
                             clipboardWrite(`https://honzoraptor.vercel.app/projects#${value.titleEn.replaceAll(" ", "-")}`)
                           }} className="popover-link">
-                            {copied ? navigator.language === "cs" || navigator.language === "cs-CZ" ? "Zkopírováno!" : "Link copied!" : navigator.language === "cs" || navigator.language === "cs-CZ" ? "Kopírovat odkaz" : "Copy link"}
+                            <span className={copied ? "success-text" : ""}>
+                              {copied ? navigator.language === "cs" || navigator.language === "cs-CZ" ? "Zkopírováno!" : "Link copied!" : navigator.language === "cs" || navigator.language === "cs-CZ" ? "Kopírovat odkaz" : "Copy link"}
+                            </span>
                           </a>
                         </div>
                       </button>

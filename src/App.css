@@ -534,12 +534,14 @@ body {
     transform: translateY(-3px);
   }
 
-  .three-dots-btn:hover {
-    background: var(--border-main);
-  }
-
   .popover .popover-link:hover {
     background: rgba(255, 255, 255, 0.175);
+  }
+
+  .before-bg-anim:hover::before,
+  .three-dots-btn:focus-within::before {
+    opacity: 1;
+    transform: scale(1.3);
   }
 }
 
@@ -1088,12 +1090,18 @@ body {
     transform: translateY(-3px);
   }
 
-  .three-dots-btn:active {
-    background: var(--border-main);
-  }
-
   .popover .popover-link:active {
     background: rgba(255, 255, 255, 0.175);
+  }
+
+  .before-bg-anim:active::before {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+
+  .three-dots-btn:focus::before {
+    opacity: 1;
+    transform: scale(1.3);
   }
 
   * {
@@ -1282,6 +1290,8 @@ main.projects>h1 {
 .project-links a {
   transition: .3s;
   display: grid;
+  border-radius: 50%;
+  aspect-ratio: 1;
 }
 
 .project-links a img {
@@ -1662,12 +1672,6 @@ main.admin {
   transition: .3s;
 }
 
-.three-dots-btn:active,
-.three-dots-btn:focus {
-  transition: none;
-  background: rgba(255, 255, 255, 0.568);
-}
-
 .three-dots-btn .popover {
   display: none;
 }
@@ -1822,4 +1826,24 @@ section p {
 
 .grid-wrp {
   display: grid;
+}
+
+.before-bg-anim {
+  position: relative;
+  transition: .3s;
+}
+
+.before-bg-anim:active:not(:focus-within) {
+  transform: scale(.9);
+}
+
+.before-bg-anim::before {
+  content: '';
+  position: absolute;
+  transition: .2s;
+  opacity: 0;
+  transform: scale(.5);
+  inset: 0;
+  border-radius: inherit;
+  background: var(--border-main);
 }
