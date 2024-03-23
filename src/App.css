@@ -1205,11 +1205,6 @@ main.projects>h1 {
   align-items: center;
 }
 
-.project-side img {
-  max-width: 100%;
-  height: auto;
-}
-
 .project-side .rounded {
   border-radius: 18px;
 }
@@ -1890,4 +1885,10 @@ section p {
   background: var(--secBG);
   border-color: rgba(255, 255, 255, 0.856) !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.527);
+}
+
+.project-image {
+  border: 1px var(--border-main) solid;
+  max-width: 100%;
+  height: auto;
 }

@@ -71,7 +71,7 @@ function Projects() {
               }} key={index} className={`project ${location.hash.slice(1) === value.titleEn.replaceAll(" ", "-") ? "project-target" : ""}`} id={value.titleEn.replaceAll(" ", "-")}>
                 <div className="project-side">
                   <a target="_blank" href={value.github}>
-                    <img src={value.img} className="rounded" />
+                    <img src={value.img} className="rounded project-image" />
                   </a>
                 </div>
                 <div className="project-side">
@@ -90,17 +90,17 @@ function Projects() {
                   <div className="project-links">
                     {value.web === "no" ? (
                       <a target="_blank" href={value.github} className="before-bg-anim">
-                        <img src="/github-icon.svg" />
+                        <img src="/github-icon.svg" className="no-select" />
                       </a>
                     ) : ("")}
 
                     {value.web === "yes" && value.link !== "no xD" ? (
                       <>
                         <a target="_blank" href={value.github} className="before-bg-anim">
-                          <img src="/github-icon.svg" />
+                          <img src="/github-icon.svg" className="no-select" />
                         </a>
                         <a target="_blank" href={value.link} className="before-bg-anim">
-                          <img src="/link-away.svg" />
+                          <img src="/link-away.svg" className="no-select" />
                         </a>
                       </>
                     ) : (
@@ -108,7 +108,7 @@ function Projects() {
                         {value.web === "yes" ? (
                           <>
                             <a target="_blank" href={value.github} className="before-bg-anim">
-                              <img src="/github-icon.svg" />
+                              <img src="/github-icon.svg" className="no-select" />
                             </a>
                             <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
                           </>
