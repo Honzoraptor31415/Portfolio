@@ -68,7 +68,7 @@ function Projects() {
                 if (location.hash !== "") {
                   document.getElementById(location.hash.slice(1))?.scrollIntoView()
                 }
-              }} key={index} className="project" id={value.titleEn.replaceAll(" ", "-")}>
+              }} key={index} className={`project ${location.hash.slice(1) === value.titleEn.replaceAll(" ", "-") ? "project-target" : ""}`} id={value.titleEn.replaceAll(" ", "-")}>
                 <div className="project-side">
                   <a target="_blank" href={value.github}>
                     <img src={value.img} className="rounded" />

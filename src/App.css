@@ -352,7 +352,7 @@ body {
     border-radius: 18px;
     display: grid;
     align-items: center;
-    grid-template-columns: 70px 80px auto;
+    grid-template-columns: auto 94px auto;
     gap: 30px;
     background: var(--secBG);
     z-index: 8;
@@ -546,6 +546,13 @@ body {
 
   .outline-btn:hover {
     border-color: white;
+  }
+
+  .langs-icons-more {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -1113,6 +1120,13 @@ body {
     border-color: white;
   }
 
+  .langs-icons-more {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+
   * {
     cursor: default !important;
   }
@@ -1145,11 +1159,8 @@ p a {
 }
 
 .langs-icons {
-  display: flex;
-  gap: 10px;
-  min-width: 70px;
-  justify-content: center;
-  max-width: 70px;
+  max-width: fit-content;
+  display: grid;
 }
 
 .no-projects-wrp {
@@ -1338,6 +1349,14 @@ main.projects>h1 {
   border-radius: 18px;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.599);
   align-items: center;
+}
+
+.langs-sec-border:target {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.7);
+}
+
+.langs-sec-border:target .langs-section {
+  margin: 3px;
 }
 
 .langs-sec-border#html-css {
@@ -1860,4 +1879,15 @@ section p {
   inset: 0;
   border-radius: inherit;
   background: var(--border-main);
+}
+
+.project {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.377);
+}
+
+.project-target,
+.project:target {
+  background: var(--secBG);
+  border-color: rgba(255, 255, 255, 0.856) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.527);
 }

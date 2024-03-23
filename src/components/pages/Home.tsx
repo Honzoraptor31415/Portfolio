@@ -99,7 +99,7 @@ function Home() {
           <h2 className="hidden" id="langs-techs">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Jazyky a technologie" : "Languages and technologies"}</h2>
           <div id="html-css" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
+              <div className="langs-icons-more">
                 <img className="no-select" src="https://skillicons.dev/icons?i=html" alt="HTML icon" />
                 <img className="no-select" src="https://skillicons.dev/icons?i=css" alt="CSS icon" />
               </div>
