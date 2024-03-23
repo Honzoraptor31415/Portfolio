@@ -75,9 +75,9 @@ function Home() {
               <img className="no-select" src="https://skillicons.dev/icons?i=appwrite" alt="Appwrite" />
             </a>
             {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-              <p className="langs-tech-above">S čím umím <span className="pointer-finger">👆</span></p>
+              <p className="langs-tech-above">Skilly <span className="pointer-finger">👆</span></p>
             ) : (
-              <p className="langs-tech-above">What I know <span className="pointer-finger">👆</span></p>
+              <p className="langs-tech-above">Skills <span className="pointer-finger">👆</span></p>
             )}
           </div>
         </div>
@@ -246,17 +246,17 @@ function Home() {
               <>
                 <p>Když programuju webový aplikace, vždycky se zamyslím nad dvěma věcma: Potřebuju backend? Jak komplikovaná tahle Webovka bude?</p>
 
-                <p>Obvykle když dělám komplikovanější věci, který mají složitej backend a hodně kódu, tak vyberu <span className="react">React</span> jako knihovnu, protože má hodně velkou komunitu, takže když se mi něco nezadaří, můžu se např. zeptat na Redditu/Discordu a někdo mi s tím poradí. Když je ta webovka ale míň komplikovaná a třeba ani nepotřebuje backend, použiju SvelteKit. Ani upřímně nevím proč používám Typescript, ale je to prostě takovej čistější zbůsob jak psát Javascript, tak asi proto. No a CSS je zatím jedinej stylovací jazyk, kterej znám, ale chtě, bych se ještě naučit <span className="sass">Sass</span>, abych byl trochu lepším developerem.</p>
+                <p>Obvykle když dělám komplikovanější věci, který mají složitej backend a hodně kódu, tak vyberu <span className="react">React</span> jako knihovnu, protože má hodně velkou komunitu, takže když se mi něco nezadaří, můžu se např. zeptat na Redditu/Discordu a někdo mi s tím poradí. SvelteKit je ale taky dobrá volba, a proto když mi něco fakt nefunguje s Reactem, použiju SvelteKit. Ani upřímně nevím proč používám Typescript, ale je to prostě takovej čistější zbůsob jak psát Javascript, tak asi proto. No a CSS je zatím jedinej stylovací jazyk, kterej znám, ale chtě, bych se ještě naučit <span className="sass">Sass</span>, abych byl trochu lepším developerem.</p>
 
-                <p>No a pro backend (BaaS) obvykle použiju Supabase, protože má úžasnou dokumentaci a je hodně jednoduchá na použití (zkoušel jsem React používat s Firebase, ale vůbec to nešlo - nešlo to ani se SvelteKitem, proto pomalu přecházím na Supabase, možná později i <span className="appwrite">Appwrite</span> ). Supabase používám i na tomhle webu btw.</p>
+                <p>No a pro backend (BaaS) obvykle použiju Supabase, protože má úžasnou dokumentaci a je hodně jednoduchá na použití (zkoušel jsem React používat s Firebase, ale vůbec to nešlo - nešlo to ani se SvelteKitem, proto pomalu přecházím na Supabase a <span className="appwrite">Appwrite</span>). Supabase používám i na tomhle webu btw.</p>
               </>
             ) : (
               <>
                 <p>When programming webapps, I always think about two things: do I need a backend? How complicated will this website be?</p>
 
-                <p>Usually when making more complicated things, which have a huge backend and a lot of code I chose <span className="react">React</span> as a library, because it's community is really big, so whenever I'm stuck coding, I can just ask on Reddit/Discord and someone will help me. However if the webapp is less complicated and ex. doesn't requier a backend at all, I chose SvelteKit. Honestely, I don't even know why I use Typescript, but it's just a cleaner way to write Javascript, so that's propably why. Well and CSS is so far the only styling language that I know, but I want to learn <span className="sass">Sass</span> in the future, just so I'm a better dev.</p>
+                <p>Usually when making more complicated things, which have a huge backend and a lot of code I chose <span className="react">React</span> as a library, because it's community is really big, so whenever I'm stuck coding, I can just ask on Reddit/Discord and someone will help me. However SvelteKit is also a great frakework, so when something really doesn't work with React, I use SvelteKit Honestely, I don't even know why I use Typescript, but it's just a cleaner way to write Javascript, so that's propably why. Well and CSS is so far the only styling language that I know, but I want to learn <span className="sass">Sass</span> in the future, just so I'm a better dev.</p>
 
-                <p>And for the backend (Bass) I usually use Supabase, because it's docs are amazing and it's really easy to learn and use (I tried using React with Firebase, but it didn't work whatsoever - it didn't even work with SvelteKit, therefor I'm slowly switching to Supabase, maybe <span className="appwrite">Appwrite</span> later). Btw, I use Supabase on this website.</p>
+                <p>And for the backend (Bass) I usually use Supabase, because it's docs are amazing and it's really easy to learn and use (I tried using React with Firebase, but it didn't work whatsoever - it didn't even work with SvelteKit, therefor I'm slowly switching to Supabase and <span className="appwrite">Appwrite</span>). Btw, I use Supabase on this website.</p>
               </>
             )}
           </section>
@@ -265,18 +265,17 @@ function Home() {
               <h3>{navigator.language === "cs" || navigator.language === "cs-CZ" ? "Pro programy na PC" : "For PC apps"} </h3>
               <div className="go-to-icons">
                 <img className="no-select" title="Python" src="https://skillicons.dev/icons?i=py" />
-                <img className="no-select" title="Firebase" src="https://skillicons.dev/icons?i=firebase" />
               </div>
             </div>
             {navigator.language === "cs" || navigator.language === "cs-CZ" ? (
               <>
-                <p>Pro aplikace na PC a tím nemyslím jen klasické aplikace s GUI oknem, ale i různý scripty pro PC používám aktuálně hlavně Python. Aplikace i s backendem ale v pythonu nedělám, a kdybych dělal, vybral bych určitě <span className="firebase">Firebase</span> (já vím že je to BaaS, nech mě bejt pls), protože má pro python asi nejlepší dokumentaci.</p>
+                <p>Pro aplikace na PC a tím nemyslím jen klasické aplikace s GUI oknem, ale i různý scripty pro PC používám aktuálně hlavně Python. Aplikace i s backendem ale v pythonu nedělám, a kdybych dělal, vybral bych asi Supabase (já vím že je to BaaS, nech mě bejt pls), protože má pro python dobrou dokumentaci nebo bych naprogramoval opravdovej backend s např. <span className="mongodb">MongoDB</span>.</p>
 
                 <p>V budoucnu mám v plánu zkusit <span className="electron">Electron JS</span> nebo <span className="react">React Native</span> (a to nejen pro desktop ale i Android), protože poskytujou daleko lepší přehled a zážitek pro vývojáře a jejich komunita je větší než ta od Pythonu.</p>
               </>
             ) : (
               <>
-                <p>For PC apps (and with that I mean not only apps with GUI, but also PC scripts and stuff) I mainly use Python. I don't do backend for apps that use Python, because it's just not the right way to do it, but if I had to, I'd go with <span className="firebase">Firebase</span> (I know that it's a BaaS, pls leave me alone), because it's docs for Python are better than for others imo. </p>
+                <p>For PC apps (and with that I mean not only apps with GUI, but also PC scripts and stuff) I mainly use Python. I usually don't do backend for apps that use Python, but if I had to, I'd go with Supabase (I know that it's a BaaS, pls leave me alone), because it's docs for Python are good or I'd just code a real backend with something like <span className="mongodb">MongoDB</span>.</p>
                 <p>In the future I'm planning on making apps with <span className="electron">Electron JS</span> or <span className="react">React Native</span> (not only for desktop, but also Android), because those provide a better experience for the developer when coding and the community is bigger than for Python.</p>
               </>
             )}
