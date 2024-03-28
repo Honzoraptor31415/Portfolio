@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./components/pages/Home"
 import Projects from "./components/pages/Projects"
@@ -8,14 +7,8 @@ import Error from "./components/pages/Error"
 import Login from "./components/pages/Login"
 import Admin from "./components/pages/Admin"
 import New from "./components/pages/New"
-import ReactGA from 'react-ga'
-ReactGA.initialize(import.meta.env.VITE_APP_GA_KEY)
 
 function App() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  }, [])
-
   const navLocations = ["", "projects", "admin"]
   const pathname = location.pathname.replaceAll("/", "")
 
