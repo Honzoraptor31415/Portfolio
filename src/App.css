@@ -330,13 +330,13 @@ body {
     display: flex;
     color: white;
     text-decoration: none;
-    gap: 27px;
+    gap: 15px;
     animation: socel-scroll cubic-bezier(1, 0.37, 0.58, 1) both;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
     background: var(--secBG);
     border-radius: inherit;
-    width: 337px;
+    width: 334px;
     margin: 1px;
     padding: 15px;
   }
@@ -777,7 +777,7 @@ body {
 
   .socel-wrp {
     display: flex;
-    gap: 30px;
+    gap: 9px;
     animation: socel-scroll cubic-bezier(1, 0.37, 0.58, 1) both;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
@@ -1866,4 +1866,5 @@ section p {
 .langs-section h3 {
   display: flex;
   gap: 7px;
+  align-items: center;
 }
