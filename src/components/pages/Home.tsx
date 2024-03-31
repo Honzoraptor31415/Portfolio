@@ -56,6 +56,9 @@ function Home() {
             <a href="#react">
               <img className="no-select" src="https://skillicons.dev/icons?i=react" alt="React" />
             </a>
+            <a href="#nextjs">
+              <img className="no-select" src="https://skillicons.dev/icons?i=nextjs" alt="NextJS" />
+            </a>
             <a href="#sveltekit">
               <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="SvelteKit" />
             </a>
@@ -64,9 +67,6 @@ function Home() {
             </a>
             <a href="#py">
               <img className="no-select" src="https://skillicons.dev/icons?i=py" alt="Python" />
-            </a>
-            <a href="#firebase">
-              <img className="no-select" src="https://skillicons.dev/icons?i=firebase" alt="Firebase" />
             </a>
             <a href="#supabase">
               <img className="no-select" src="https://skillicons.dev/icons?i=supabase" alt="Supabase" />
@@ -99,11 +99,9 @@ function Home() {
           <h2 className="hidden" id="langs-techs">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Jazyky a technologie" : "Languages and technologies"}</h2>
           <div id="html-css" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons-more">
-                <img className="no-select" src="https://skillicons.dev/icons?i=html" alt="HTML icon" />
-                <img className="no-select" src="https://skillicons.dev/icons?i=css" alt="CSS icon" />
+              <div className="langs-section-top">
+                <h3>HTML <img className="no-select" src="https://skillicons.dev/icons?i=html" alt="HTML icon" />, CSS <img className="no-select" src="https://skillicons.dev/icons?i=css" alt="CSS icon" /></h3>
               </div>
-              <h3>HTML, CSS</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>Jak už jsem řekl, tohle byly první jazyky, co jsem se naučil. Tenktrát jsem neuměl úplně designovat, takže všechno co jsem stvořil vypadalo otřesně. <span className="sarcasm">Bohužel</span> Naštěstí jsem si z těch dob nic nezachoval, takže ty odporný designy nikdo neuvidí.</p>
               ) : (
@@ -113,10 +111,9 @@ function Home() {
           </div>
           <div id="js" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=js" alt="JS icon" />
+              <div className="langs-section-top">
+                <h3>JS <img className="no-select" src="https://skillicons.dev/icons?i=js" alt="JS icon" /></h3>
               </div>
-              <h3>JS</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>Tohle byl první opravdu programovací jazyk, kterej jsem se naučil. Zkoušel jsem s ním dělat i hry jako The scary maze game a myslím, že výsledek vypadal úctyhodně. Javascript je skvělej jazyk pro začátečníky i pokročilý, protože s ním jde dělat <span className="colored-text"><b>doslova</b></span> všechno: Programovat Full-stack webový aplikace, aplikace pro PC, servery a dokonce i hry!</p>
               ) : (
@@ -127,10 +124,10 @@ function Home() {
           </div>
           <div id="py" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=py" alt="Python icon" />
+              <div className="langs-section-top">
+
+                <h3>Python <img className="no-select" src="https://skillicons.dev/icons?i=py" alt="Python icon" /></h3>
               </div>
-              <h3>Python</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>V tomhle bodě už mě programování začalo fakt bavit a chtěl jsem zkusit něco novýho. Moje první řádky Python kódu jsem napsal na webovým IDEčku na <a target="_blank" href="https://www.w3schools.com/python/trypython.asp?filename=demo_default">W3schools.com</a></p>
               ) : (
@@ -138,25 +135,12 @@ function Home() {
               )}
             </section>
           </div>
-          <div id="firebase" className="langs-sec-border hidden">
-            <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=firebase" alt="Firebase icon" />
-              </div>
-              <h3>Firebase</h3>
-              {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-                <p>Nejdřív jsem se chtěl naučit PHP a MySQL, ale to jsou starý a nepoužívaný technologie, který jsou i těžší na používání než Firebase. Mimo jiné jsem Firebase Real-time databázi použil na mým starším webu, kterej byl jenom ve vanilla HTML, bez jakejchkoliv frameworků.</p>
-              ) : (
-                <p>I first wanted to learn PHP and MySQL, but those are kind of old and unused technologies, that are also harder to setup than Firebase. One of the websites that I first used Firebase on is my older portfolio website, that is written in HTML. No framework was used for it.</p>
-              )}
-            </section>
-          </div>
           <div id="ts" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=ts" alt="TS icon" />
+              <div className="langs-section-top">
+
+                <h3>TS <img className="no-select" src="https://skillicons.dev/icons?i=ts" alt="TS icon" /></h3>
               </div>
-              <h3>TS</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>Ikdyž tenhle jazyk zrovna nemusim, protože má divnej syntax, kterej je vlastně jenom zmrvenej Javascript, začal jsem se ho učit asi v tu dobu, kdy jsem zjistil o Reactu a přišel jsem mu na kloub.</p>
               ) : (
@@ -166,10 +150,10 @@ function Home() {
           </div>
           <div id="react" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=react" alt="React icon" />
+              <div className="langs-section-top">
+
+                <h3>React <img className="no-select" src="https://skillicons.dev/icons?i=react" alt="React icon" /></h3>
               </div>
-              <h3>React</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>Když jsem udělal moje první Reactový webovky, cítil jsem tu sílu, kterou v sobě React má a když pominu problémy, který jsem měl když jsem poprvé používál useStaty a useEffecty, je to celkem fajn framework. Mimochodem jsem React použil na tuhle webovku.</p>
               ) : (
@@ -179,10 +163,10 @@ function Home() {
           </div>
           <div id="git" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=git" alt="Git icon" />
+              <div className="langs-section-top">
+
+                <h3>Git <img className="no-select" src="https://skillicons.dev/icons?i=git" alt="Git icon" /></h3>
               </div>
-              <h3>Git</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>Další krok k tomu být lepší vývojář je se naučit záchazet s Gitem a Githubem (nebo GigLabem/BitBucketem, ale Github je nejpoužívanější). Začal jsem se s ním učit zacházet kolem listopadu 2023, což je podle mě docela pozdě. Každopádně, <a target="_blank" href="https://github.com/Honzoraptor31415">tady je můj Github</a>.</p>
               ) : (
@@ -192,10 +176,10 @@ function Home() {
           </div>
           <div id="sveltekit" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="SvelteKit icon" />
+              <div className="langs-section-top">
+
+                <h3>SvelteKit <img className="no-select" src="https://skillicons.dev/icons?i=svelte" alt="SvelteKit icon" /></h3>
               </div>
-              <h3>SvelteKit</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>Je často označovanej jako nejpříjemnější Javascriptová library (to jako knihovna idk). A chápu proč: když píšeš cokoliv ve Sveltu/SvelteKitu, cítíš se, jako bys psal nějaký vyboostovaný HTML, který umí dělat podmínkový renderování, renderování arrayí (nevim jak na to do češtiny, j. č. je array) a psát proměnný přímo do markup kódu. Je daleko lěhčí v porovnání s Reactem, ale komunita kolem něj není bohužel moc velká.</p>
               ) : (
@@ -205,10 +189,9 @@ function Home() {
           </div>
           <div id="supabase" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=supabase" alt="Supabase icon" />
+              <div className="langs-section-top">
+                <h3>Supabase <img className="no-select" src="https://skillicons.dev/icons?i=supabase" alt="Supabase icon" /></h3>
               </div>
-              <h3>Supabase</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>Často používaná alternativa pro Firebase, kterou jsem začal používat kolem začátku ledna 2024, a to proto, abych mohl tenhle web připojit na nějakou databázi: nejdřív jsem zkusil Firebase, ale prostě to s Reactem nefungovalo, tak proto Supabase.</p>
               ) : (
@@ -218,14 +201,26 @@ function Home() {
           </div>
           <div id="appwrite" className="langs-sec-border hidden">
             <section className="langs-section">
-              <div className="langs-icons">
-                <img className="no-select" src="https://skillicons.dev/icons?i=appwrite" alt="Appwrite icon" />
+              <div className="langs-section-top">
+                <h3>Appwrite <img className="no-select" src="https://skillicons.dev/icons?i=appwrite" alt="Appwrite icon" /></h3>
               </div>
-              <h3>Appwrite</h3>
               {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
                 <p>Protože umět s dvěma BaaSama (basama lol) není dost, začátkem března jsem se naučil zacházet i s Appwritem. Bylo to taky protože mi SvelteKit nefungoval s Firebase. No a když jsem SvelteKit zkusil s Appwritem, bylo to úžasný, jednoduchý a hlavně bez glitchů.</p>
               ) : (
                 <p>Because <span className="sarcasm">mastering</span> knowing how to work with two BaaSes is not enough, in the beginning of March 2024 I learned to work with Appwrite. I also did it, because SvelteKit didn't work as good as it should with Firebase. And when I tried SvelteKit with Appwrite, it was wonderful, easy and mainly without any glitches.</p>
+              )}
+            </section>
+          </div>
+          <div id="nextjs" className="langs-sec-border hidden">
+            <section className="langs-section">
+              <div className="langs-section-top">
+
+                <h3>NextJS <img className="no-select" src="https://skillicons.dev/icons?i=next" alt="NextJS icon" /></h3>
+              </div>
+              {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
+                <p>Framework pro react, se kterým jsem začal dělat koncem března 2024. Je v něm poznat, že je to něco víc než React třeba kvůli tomu, že má složkovej routing, SSR nebo třeba soubory jako <span className="code">page.js</span> nebo <span className="code">layout.js</span>, podobně jako je tomu ve SvelteKitu.</p>
+              ) : (
+                <p>A framework for React, that I started using at the end of March 2024. When using it, you can tell that it's better than React, because it has stuff like filesystem-based routing, SSR or files like <span className="code">page.js</span> or <span className="code">layout.js</span>, similarly how SvelteKit has.</p>
               )}
             </section>
           </div>
@@ -284,7 +279,7 @@ function Home() {
         <section className="hidden" id="contact">
           <h2>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Kde mě najdeš" : "You can also find me here"}</h2>
           <div className="contact-socials-wrp">
-            <a target="_blank" title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Nebo mi prostě napiš na instagramu" : "Or you can just DM me on instagram"} href="mailto:honzoraptor@gmail.com" className="socel-container hidden">
+            <a target="_blank" title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Nebo mi prostě napiš na instagramu" : "Or you can just DM me on instagram"} href="mailto:honzoraptor@gmail.com" className="socel-container radial-blue hidden">
               <div className="socel-wrp">
                 <img className="no-select" src="gmail-icon.svg" alt="Gmail icon" />
                 <div className="socials-element">
@@ -293,7 +288,7 @@ function Home() {
                 </div>
               </div>
             </a>
-            <a target="_blank" href="https://github.com/Honzoraptor31415" className="socel-container hidden">
+            <a target="_blank" href="https://github.com/Honzoraptor31415" className="socel-container radial-white hidden">
               <div className="socel-wrp">
                 <img className="no-select" src="github-icon.svg" alt="Github icon" />
                 <div className="socials-element">
@@ -302,7 +297,7 @@ function Home() {
                 </div>
               </div>
             </a>
-            <a target="_blank" href="https://www.instagram.com/honzoraptor/" className="socel-container hidden">
+            <a target="_blank" href="https://www.instagram.com/honzoraptor/" className="socel-container radial-pink hidden">
               <div className="socel-wrp">
                 <img className="no-select" src="instagram-icon.svg" alt="Instagram icon" />
                 <div className="socials-element">
@@ -311,7 +306,7 @@ function Home() {
                 </div>
               </div>
             </a>
-            <a target="_blank" title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Už moc hry nedělám (udělal jsem zatím jenom jednu xD)" : "I don't really make games anymore (I made just one in my life xD)"} href="https://honzoraptor.itch.io/" className="socel-container hidden">
+            <a target="_blank" title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Už moc hry nedělám (udělal jsem zatím jenom jednu xD)" : "I don't really make games anymore (I made just one in my life xD)"} href="https://honzoraptor.itch.io/" className="socel-container radial-light-red hidden">
               <div className="socel-wrp">
                 <img className="no-select" src="itch-icon.svg" alt="Itch icon" />
                 <div className="socials-element">
