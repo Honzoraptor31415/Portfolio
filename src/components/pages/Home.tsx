@@ -30,7 +30,7 @@ function Home() {
     <>
       <header>
         <BlurryBackground />
-        <div className="header-side hidden">
+        <div className="header-side header-left hidden">
           <h1>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Těpéro!" : "Hey there!"}</h1>
           {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
 
@@ -38,6 +38,17 @@ function Home() {
           ) : (
             <p className="header-about">This is a small portfolio website made by <a href="https://github.com/Honzoraptor31415" target="_blank" className="colored-text">Honzoraptor</a>. Whenever I code something, you'll find it here.</p>
           )}
+          <div className="primary-btn-wrp">
+            <a href="/projects" className="primary-btn span-move-btn">{navigator.language === "cs-CZ" || navigator.language === "cs" ? (
+              <>
+                Moje projekty <span>→</span>
+              </>
+            ) : (
+              <>
+                My projects <span>→</span>
+              </>
+            )}</a>
+          </div>
         </div>
         <div className="header-side hidden">
           <div className="langs-tech">

@@ -27,7 +27,7 @@ function Nav() {
     <>
       <nav id="desktop">
         <div className="nav-side">
-          <a href="/" className="logo-text" data-title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}</a>
+          <a href="/#" className="logo-text" data-title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}</a>
         </div>
         <div className="nav-side desktop-menu">
           <div className="link-wrp">
@@ -52,7 +52,7 @@ function Nav() {
           <a href="https://github.com/Honzoraptor31415" className="nav-side">
             <img className="no-select" src="/github-icon.svg" alt="Github icon" />
           </a>
-          <a href="/" className="logo-text" data-title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}</a>
+          <a href="/#" className="logo-text" data-title={navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}>{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Honzovo" : "HonzoRaptor's"}</a>
           <div className="grid-wrp nav-side">
             <button className="nav-menu-button" onClick={() => { setNavState(0) }}>
               <div className="menu-line"></div>
