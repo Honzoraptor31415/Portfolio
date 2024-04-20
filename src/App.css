@@ -9,6 +9,7 @@
   --accent2-alpha: rgba(60, 96, 120, 0.5);
   --border-main: rgba(255, 255, 255, 0.14);
   --main-header-spacing: 20px;
+  --section-spacing: 50px;
 }
 
 * {
@@ -274,7 +275,7 @@ body {
   }
 
   main {
-    margin-bottom: 120px;
+    margin-bottom: var(--section-spacing);
     overflow-x: hidden;
     min-height: 100vh;
   }
@@ -300,8 +301,12 @@ body {
     justify-content: center;
   }
 
+  section:not(.langs-section, .go-to-section):first-child {
+    padding-top: var(--section-spacing);
+  }
+
   section:not(.langs-section, .go-to-section) {
-    padding-block: 50px;
+    padding-bottom: 50px;
     width: 700px;
     margin-inline: auto;
   }
@@ -392,7 +397,7 @@ body {
     border-radius: 18px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     background: var(--secBG);
     z-index: 8;
   }
@@ -566,8 +571,8 @@ body {
 
   .hidden {
     opacity: 0;
-    filter: blur(3px);
-    transform: translateX(-30%);
+    filter: blur(2px);
+    transform: translateX(-10%);
     transition: all .4s;
   }
 
@@ -719,6 +724,7 @@ body {
 
   main {
     min-height: 100vh;
+    margin-bottom: var(--section-spacing);
     overflow-x: hidden;
   }
 
@@ -749,8 +755,12 @@ body {
     flex-wrap: wrap;
   }
 
+  section:not(.langs-section, .go-to-section):first-child {
+    padding-top: var(--section-spacing);
+  }
+
   section:not(.langs-section, .go-to-section) {
-    padding: 50px 15px;
+    padding: 0 15px var(--section-spacing) 15px;
     width: 100%;
   }
 
@@ -796,6 +806,7 @@ body {
   .socel-wrp img {
     min-width: 45px;
     max-width: 45px;
+    margin-inline: 6px;
     height: auto;
     max-height: 45px;
   }

@@ -4,7 +4,7 @@ import BlurryBackground from "../BlurryBackground"
 function Home() {
   useEffect(() => {
     if (navigator.language === "cs-CZ" || navigator.language === "cs") {
-      document.title = "HonzoRaptorovo portfolio!"
+      document.title = "Honzoraptorovo portfolio!"
     } else {
       document.title = "Honzoraptor's portfolio!"
     }
