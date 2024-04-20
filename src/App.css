@@ -8,6 +8,7 @@
   --accent_hover: #5C6AFF;
   --accent2-alpha: rgba(60, 96, 120, 0.5);
   --border-main: rgba(255, 255, 255, 0.14);
+  --main-header-spacing: 20px;
 }
 
 * {
@@ -542,6 +543,10 @@ body {
 }
 
 @media (max-width: 999px) {
+  body {
+    --main-header-spacing: 30px;
+  }
+
   .socials-element p {
     color: rgba(255, 255, 255, 0.836);
     transition: .3s;
@@ -731,14 +736,14 @@ body {
     font-size: 1rem;
     color: #ffffffd4;
     text-align: center;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     width: 100%;
     font-weight: 700;
   }
 
   .langs-tech {
-    margin-top: 20px;
-    max-width: 204px;
+    margin-top: var(--main-header-spacing);
+    max-width: 80%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -839,7 +844,7 @@ body {
 
   .langs-tech a {
     display: grid;
-    margin: 7px 10px;
+    margin: 8px;
     transition: .3s;
     border-radius: 12px;
   }
@@ -1900,6 +1905,12 @@ div .span-move-btn:hover span {
 
 .header-left {
   display: flex;
-  gap: 20px;
+  gap: var(--main-header-spacing);
   flex-direction: column;
+}
+
+.flex-center-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

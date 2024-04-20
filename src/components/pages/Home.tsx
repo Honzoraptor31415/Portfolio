@@ -86,9 +86,9 @@ function Home() {
               <img className="no-select" src="https://skillicons.dev/icons?i=appwrite" alt="Appwrite" />
             </a>
             {navigator.language === "cs-CZ" || navigator.language === "cs" ? (
-              <p className="langs-tech-above">Skilly <span className="pointer-finger">👆</span></p>
+              <p className="langs-tech-above flex-center-all">Skilly <span className="pointer-finger">👆</span></p>
             ) : (
-              <p className="langs-tech-above">Skills <span className="pointer-finger">👆</span></p>
+              <p className="langs-tech-above flex-center-all">Skills <span className="pointer-finger">👆</span></p>
             )}
           </div>
         </div>
