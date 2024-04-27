@@ -545,6 +545,11 @@ body {
     box-shadow: -6px 6px 7px var(--accent2-alpha);
     transform: translate(1px, -1px);
   }
+
+  .no-projects p {
+    max-width: 60%;
+    margin: auto;
+  }
 }
 
 @media (max-width: 999px) {
@@ -1924,4 +1929,8 @@ div .span-move-btn:hover span {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+main:has(.no-projects-wrp) {
+  padding-top: 0;
 }
