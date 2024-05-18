@@ -27,7 +27,7 @@ function Projects() {
   }, [])
 
   const getData = async () => {
-    const res: any = await supabase.from("Projects").select("*")
+    const res: any = await supabase.from("projects").select("*")
     /*  Date formating  */
     // res.data[0].date.split(".") = ex. ["10", "12", " 2023"]
     // res.data[0].date.split(".")[2].slice(1) = ex "2023" (cleans the whitespace)
@@ -73,8 +73,8 @@ function Projects() {
                     }
                   }} key={index} className={`project ${location.hash.slice(1) === value.titleEn.replaceAll(" ", "-") ? "project-target" : ""}`} id={value.titleEn.replaceAll(" ", "-")}>
                     <div className="project-side">
-                      <a target="_blank" href={value.github}>
-                        <img src={value.img} className="rounded project-image" />
+                      <a target="_blank" href={value.githubUrl}>
+                        <img src={value.imgUrl} className="rounded project-image" />
                       </a>
                     </div>
                     <div className="project-side">
@@ -91,30 +91,18 @@ function Projects() {
                         <p>{value.textEn}</p>
                       )}
                       <div className="project-links">
-                        {value.web === "no" ? (
-                          <a target="_blank" href={value.github} className="before-bg-anim">
-                            <img src="/github-icon.svg" className="no-select" />
-                          </a>
-                        ) : ("")}
+                        <a target="_blank" href={value.githubUrl} className="before-bg-anim">
+                          <img src="/github-icon.svg" className="no-select" />
+                        </a>
 
-                        {value.web === "yes" && value.link !== "no xD" ? (
-                          <>
-                            <a target="_blank" href={value.github} className="before-bg-anim">
-                              <img src="/github-icon.svg" className="no-select" />
-                            </a>
-                            <a target="_blank" href={value.link} className="before-bg-anim">
-                              <img src="/link-away.svg" className="no-select" />
-                            </a>
-                          </>
+                        {value.isWeb && value.linkUrl ? (
+                          <a target="_blank" href={value.linkUrl} className="before-bg-anim">
+                            <img src="/link-away.svg" className="no-select" />
+                          </a>
                         ) : (
                           <>
-                            {value.web === "yes" ? (
-                              <>
-                                <a target="_blank" href={value.github} className="before-bg-anim">
-                                  <img src="/github-icon.svg" className="no-select" />
-                                </a>
-                                <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
-                              </>
+                            {value.isWeb && !value.linkUrl ? (
+                              <p className="no-demo">{navigator.language === "cs-CZ" || navigator.language === "cs" ? "Aplikace ještě není zveřejněná" : "App is not deployed yet"}</p>
                             ) : ("")}
                           </>
                         )}

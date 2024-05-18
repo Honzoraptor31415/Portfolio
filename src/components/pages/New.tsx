@@ -54,20 +54,19 @@ function New() {
   const handleSubmit = async () => {
     const { data: { user } } = await supabase.auth.getUser()
     if (user) {
-      const res = await supabase.from("Projects").insert(
+      await supabase.from("projects").insert(
         {
           titleCz: CZtitle,
           titleEn: ENTitle,
           date: date ? date : `${new Date().getDate()}.${new Date().getMonth() + 1}. ${new Date().getFullYear()}`,
-          img: imgUrl,
-          github: githubLink,
-          link: url ? url : "no xD",
+          imgUrl: imgUrl,
+          githubUrl: githubLink,
+          linkUrl: url ? url : "no xD",
           textCz: CZText,
           textEn: ENText,
           tags: tags,
-          web: isWeb
-        }).select("*").single()
-      console.log(res)
+          isWeb: isWeb
+        })
     }
   }
 
